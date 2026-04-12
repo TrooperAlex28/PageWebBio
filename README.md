@@ -25,6 +25,8 @@ copy .env.example .env
 
 Si les variables SMTP ne sont pas renseignees, le serveur utilise automatiquement un compte Ethereal de test.
 
+Important: le fichier `.env.example` doit rester en valeurs fictives uniquement. Les vraies valeurs vont dans les variables d'environnement Netlify, jamais dans le repo.
+
 ## Configuration Gmail
 
 1. Active la validation en 2 etapes sur ton compte Google.
