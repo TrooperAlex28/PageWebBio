@@ -388,19 +388,37 @@
       message: document.getElementById("message")?.value.trim() || "",
     };
 
-    const response = await fetch("/api/contact", {
+    const isLocalhost =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1";
+    const endpoint = isLocalhost
+      ? "/api/contact"
+      : "/.netlify/functions/contact";
+
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
-    const data = await response.json().catch(function () {
-      return null;
-    });
+    const responseText = await response.text();
+    let data = null;
+
+    if (responseText) {
+      try {
+        data = JSON.parse(responseText);
+      } catch (_error) {
+        data = null;
+      }
+    }
 
     if (!response.ok) {
+      const statusInfo = response.status
+        ? " (HTTP " + response.status + ")"
+        : "";
+      const bodyInfo = data && data.error ? data.error : responseText.trim();
       throw new Error(
-        data && data.error ? data.error : "Failed to send contact form.",
+        (bodyInfo || "Failed to send contact form.") + statusInfo,
       );
     }
 
