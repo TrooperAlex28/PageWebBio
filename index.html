@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex — Personal Website</title>
+  <title>Alex — Site Personnel</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,15 +15,18 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#home" class="nav__logo">Alex</a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <div class="nav__end">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="#home"     class="nav__link" data-i18n="nav-home">Accueil</a></li>
+          <li><a href="#about"    class="nav__link" data-i18n="nav-about">À propos</a></li>
+          <li><a href="#services" class="nav__link" data-i18n="nav-services">Services</a></li>
+          <li><a href="#contact"  class="nav__link" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch to English">🇬🇧 EN</button>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" data-i18n-aria-label="aria-open-menu">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav__list" id="nav-list">
-        <li><a href="#home"     class="nav__link">Home</a></li>
-        <li><a href="#about"    class="nav__link">About</a></li>
-        <li><a href="#services" class="nav__link">Services</a></li>
-        <li><a href="#contact"  class="nav__link">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
@@ -32,12 +35,12 @@
     <!-- ===== HERO ===== -->
     <section class="hero section" id="home">
       <div class="container hero__content">
-        <span class="hero__greeting">Hello, I'm</span>
+        <span class="hero__greeting" data-i18n="hero-greeting">Bonjour, je suis</span>
         <h1 class="hero__name">Alex</h1>
-        <p class="hero__tagline">Developer · Designer · Problem Solver</p>
+        <p class="hero__tagline" data-i18n="hero-tagline">Développeur · Designer · Résolveur de problèmes</p>
         <div class="hero__cta">
-          <a href="#about"    class="btn btn--primary">Learn More</a>
-          <a href="#contact"  class="btn btn--outline">Get in Touch</a>
+          <a href="#about"    class="btn btn--primary"  data-i18n="hero-cta-learn">En savoir plus</a>
+          <a href="#contact"  class="btn btn--outline"  data-i18n="hero-cta-contact">Me contacter</a>
         </div>
       </div>
       <div class="hero__scroll" aria-hidden="true">
@@ -48,8 +51,8 @@
     <!-- ===== ABOUT / BACKGROUND ===== -->
     <section class="about section" id="about">
       <div class="container">
-        <h2 class="section__title">Background</h2>
-        <p class="section__subtitle">Who I am &amp; where I come from</p>
+        <h2 class="section__title" data-i18n="about-title">Parcours</h2>
+        <p class="section__subtitle" data-i18n="about-subtitle">Qui je suis &amp; d'où je viens</p>
 
         <div class="about__grid">
           <div class="about__avatar-wrap">
@@ -62,20 +65,20 @@
           </div>
 
           <div class="about__text">
-            <p>
-              I'm a passionate developer with a strong foundation in software engineering and
-              a love for creating intuitive digital experiences. My journey started with a
-              curiosity about how things work on the web, which quickly evolved into a
-              full-fledged career building products people enjoy using.
+            <p data-i18n="about-p1">
+              Je suis un développeur passionné avec de solides bases en ingénierie logicielle et
+              un amour pour la création d'expériences numériques intuitives. Mon parcours a commencé
+              par une curiosité sur le fonctionnement du web, qui s'est rapidement transformée en
+              une carrière à part entière dans la création de produits que les gens aiment utiliser.
             </p>
-            <p>
-              Over the years I have worked across the full stack — from crafting pixel-perfect
-              interfaces to designing robust back-end architectures. I believe great software
-              is born at the intersection of clean code and thoughtful design.
+            <p data-i18n="about-p2">
+              Au fil des années, j'ai travaillé sur la totalité de la pile — de la création
+              d'interfaces pixel-perfect à la conception d'architectures back-end robustes. Je crois
+              que le bon logiciel naît à l'intersection du code propre et du design réfléchi.
             </p>
-            <p>
-              Outside of work, I enjoy open-source contributions, staying up to date with the
-              latest in tech, and sharing knowledge through writing and mentorship.
+            <p data-i18n="about-p3">
+              En dehors du travail, j'apprécie les contributions open-source, me tenir au courant
+              des dernières actualités tech, et partager mes connaissances à travers l'écriture et le mentorat.
             </p>
 
             <ul class="about__skills">
@@ -95,19 +98,19 @@
         <div class="about__stats">
           <div class="stat-card">
             <span class="stat-card__number">5+</span>
-            <span class="stat-card__label">Years of Experience</span>
+            <span class="stat-card__label" data-i18n="stat-experience">Ans d'expérience</span>
           </div>
           <div class="stat-card">
             <span class="stat-card__number">30+</span>
-            <span class="stat-card__label">Projects Completed</span>
+            <span class="stat-card__label" data-i18n="stat-projects">Projets réalisés</span>
           </div>
           <div class="stat-card">
             <span class="stat-card__number">20+</span>
-            <span class="stat-card__label">Happy Clients</span>
+            <span class="stat-card__label" data-i18n="stat-clients">Clients satisfaits</span>
           </div>
           <div class="stat-card">
             <span class="stat-card__number">10+</span>
-            <span class="stat-card__label">Open-Source Contributions</span>
+            <span class="stat-card__label" data-i18n="stat-opensource">Contributions Open-Source</span>
           </div>
         </div>
       </div>
@@ -116,8 +119,8 @@
     <!-- ===== SERVICES ===== -->
     <section class="services section section--alt" id="services">
       <div class="container">
-        <h2 class="section__title">Services</h2>
-        <p class="section__subtitle">What I can do for you</p>
+        <h2 class="section__title" data-i18n="services-title">Services</h2>
+        <p class="section__subtitle" data-i18n="services-subtitle">Ce que je peux faire pour vous</p>
 
         <div class="services__grid">
 
@@ -129,10 +132,10 @@
                 <path d="M14 20l5 5-5 5M26 28h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Web Development</h3>
-            <p class="service-card__desc">
-              End-to-end development of modern, performant websites and web applications
-              using the latest technologies and best practices.
+            <h3 class="service-card__title" data-i18n="service-webdev-title">Développement Web</h3>
+            <p class="service-card__desc" data-i18n="service-webdev-desc">
+              Développement complet de sites et d'applications web modernes et performants,
+              en utilisant les dernières technologies et bonnes pratiques.
             </p>
           </article>
 
@@ -144,10 +147,10 @@
                 <path d="M14 38h8M24 38h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">UI / UX Design</h3>
-            <p class="service-card__desc">
-              User-centered design that transforms complex requirements into clean,
-              accessible interfaces your users will love.
+            <h3 class="service-card__title" data-i18n="service-uiux-title">Design UI / UX</h3>
+            <p class="service-card__desc" data-i18n="service-uiux-desc">
+              Un design centré sur l'utilisateur qui transforme des exigences complexes en interfaces
+              épurées et accessibles que vos utilisateurs apprécieront.
             </p>
           </article>
 
@@ -158,10 +161,10 @@
                 <path d="M24 8v16l10 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Consulting</h3>
-            <p class="service-card__desc">
-              Strategic technical guidance to help your team make the right technology
-              choices, improve architecture, and accelerate delivery.
+            <h3 class="service-card__title" data-i18n="service-consulting-title">Conseil</h3>
+            <p class="service-card__desc" data-i18n="service-consulting-desc">
+              Des conseils techniques stratégiques pour aider votre équipe à faire les bons choix
+              technologiques, améliorer l'architecture et accélérer la livraison.
             </p>
           </article>
 
@@ -173,10 +176,10 @@
                 <rect x="32" y="6"  width="10" height="34" rx="2" stroke="currentColor" stroke-width="2.5"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Performance Optimization</h3>
-            <p class="service-card__desc">
-              Auditing and optimizing existing applications for speed, scalability, and
-              better Core Web Vitals scores.
+            <h3 class="service-card__title" data-i18n="service-perf-title">Optimisation des Performances</h3>
+            <p class="service-card__desc" data-i18n="service-perf-desc">
+              Audit et optimisation d'applications existantes pour la vitesse, la scalabilité
+              et de meilleurs scores Core Web Vitals.
             </p>
           </article>
 
@@ -187,10 +190,10 @@
                 <rect x="18" y="28" width="12" height="14" rx="1" stroke="currentColor" stroke-width="2.5"/>
               </svg>
             </div>
-            <h3 class="service-card__title">API &amp; Back-End</h3>
-            <p class="service-card__desc">
-              Design and implementation of RESTful &amp; GraphQL APIs, microservices, and
-              database-driven back-end systems.
+            <h3 class="service-card__title" data-i18n="service-api-title">API &amp; Back-End</h3>
+            <p class="service-card__desc" data-i18n="service-api-desc">
+              Conception et mise en œuvre d'APIs RESTful &amp; GraphQL, de microservices et
+              de systèmes back-end orientés base de données.
             </p>
           </article>
 
@@ -203,10 +206,10 @@
                 <path d="M18 17l8 16M30 17l-8 16M18 14h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Mentorship &amp; Training</h3>
-            <p class="service-card__desc">
-              One-on-one or team coaching, code reviews, and workshops to help developers
-              level up their skills and confidence.
+            <h3 class="service-card__title" data-i18n="service-mentorship-title">Mentorat &amp; Formation</h3>
+            <p class="service-card__desc" data-i18n="service-mentorship-desc">
+              Coaching individuel ou en équipe, revues de code et ateliers pour aider les développeurs
+              à améliorer leurs compétences et leur confiance.
             </p>
           </article>
 
@@ -217,8 +220,8 @@
     <!-- ===== CONTACT ===== -->
     <section class="contact section" id="contact">
       <div class="container">
-        <h2 class="section__title">Contact Me</h2>
-        <p class="section__subtitle">Let's work together — drop me a message</p>
+        <h2 class="section__title" data-i18n="contact-title">Me Contacter</h2>
+        <p class="section__subtitle" data-i18n="contact-subtitle">Travaillons ensemble — envoyez-moi un message</p>
 
         <div class="contact__grid">
 
@@ -232,7 +235,7 @@
                 </svg>
               </span>
               <div>
-                <strong>Email</strong>
+                <strong data-i18n="contact-email-label">E-mail</strong>
                 <a href="mailto:hello@alex.dev">hello@alex.dev</a>
               </div>
             </div>
@@ -245,8 +248,8 @@
                 </svg>
               </span>
               <div>
-                <strong>Location</strong>
-                <span>Available Worldwide (Remote)</span>
+                <strong data-i18n="contact-location-label">Localisation</strong>
+                <span data-i18n="contact-location-value">Disponible dans le monde entier (Télétravail)</span>
               </div>
             </div>
 
@@ -257,7 +260,7 @@
                 </svg>
               </span>
               <div>
-                <strong>Phone</strong>
+                <strong data-i18n="contact-phone-label">Téléphone</strong>
                 <a href="tel:+10000000000">+1 (000) 000-0000</a>
               </div>
             </div>
@@ -266,12 +269,13 @@
           <!-- Contact form -->
           <form class="contact__form" id="contact-form" novalidate>
             <div class="form__group">
-              <label for="name">Full Name <span aria-hidden="true">*</span></label>
+              <label for="name"><span data-i18n="form-name-label">Nom complet</span> <span aria-hidden="true">*</span></label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Your name"
+                placeholder="Votre nom"
+                data-i18n-placeholder="placeholder-name"
                 autocomplete="name"
                 required
               />
@@ -279,12 +283,13 @@
             </div>
 
             <div class="form__group">
-              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <label for="email"><span data-i18n="form-email-label">Adresse e-mail</span> <span aria-hidden="true">*</span></label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="you@example.com"
+                placeholder="vous@exemple.com"
+                data-i18n-placeholder="placeholder-email"
                 autocomplete="email"
                 required
               />
@@ -292,29 +297,31 @@
             </div>
 
             <div class="form__group">
-              <label for="subject">Subject</label>
+              <label for="subject" data-i18n="form-subject-label">Sujet</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                placeholder="How can I help you?"
+                placeholder="Comment puis-je vous aider ?"
+                data-i18n-placeholder="placeholder-subject"
                 autocomplete="off"
               />
             </div>
 
             <div class="form__group">
-              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <label for="message"><span data-i18n="form-message-label">Message</span> <span aria-hidden="true">*</span></label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
-                placeholder="Tell me about your project or question…"
+                placeholder="Parlez-moi de votre projet ou question…"
+                data-i18n-placeholder="placeholder-message"
                 required
               ></textarea>
               <span class="form__error" id="message-error" role="alert"></span>
             </div>
 
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="form-submit">Envoyer le message</button>
             <p class="form__success" id="form-success" aria-live="polite"></p>
           </form>
 
@@ -327,17 +334,17 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="footer-year"></span> Alex. All rights reserved.</p>
+      <p>&copy; <span id="footer-year"></span> Alex. <span data-i18n="footer-rights">Tous droits réservés.</span></p>
       <ul class="footer__links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home"     data-i18n="footer-home">Accueil</a></li>
+        <li><a href="#about"    data-i18n="footer-about">À propos</a></li>
+        <li><a href="#services" data-i18n="footer-services">Services</a></li>
+        <li><a href="#contact"  data-i18n="footer-contact">Contact</a></li>
       </ul>
     </div>
   </footer>
 
-  <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</a>
+  <a href="#home" class="back-to-top" id="back-to-top" aria-label="Retour en haut" data-i18n-aria-label="aria-back-to-top">&#8679;</a>
 
   <script src="js/main.js"></script>
 </body>
