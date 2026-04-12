@@ -183,6 +183,33 @@ ul { list-style: none; }
   padding: 0.25rem;
   border-radius: 0.5rem;
 }
+
+/* Nav right-side wrapper */
+.nav__end {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Language toggle button */
+.lang-toggle {
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.lang-toggle:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
 .nav__toggle span {
   display: block;
   width: 100%;

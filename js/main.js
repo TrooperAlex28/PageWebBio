@@ -1,9 +1,191 @@
 /* ============================================================
-   main.js — navigation, scroll effects, form validation
+   main.js — navigation, scroll effects, form validation, i18n
    ============================================================ */
 
 (function () {
   'use strict';
+
+  /* ----------------------------------------------------------
+     Translations (i18n)
+  ---------------------------------------------------------- */
+  const translations = {
+    fr: {
+      'page-title':               'Alex — Site Personnel',
+      'nav-home':                 'Accueil',
+      'nav-about':                'À propos',
+      'nav-services':             'Services',
+      'nav-contact':              'Contact',
+      'hero-greeting':            'Bonjour, je suis',
+      'hero-tagline':             'Développeur · Designer · Résolveur de problèmes',
+      'hero-cta-learn':           'En savoir plus',
+      'hero-cta-contact':         'Me contacter',
+      'about-title':              'Parcours',
+      'about-subtitle':           "Qui je suis & d'où je viens",
+      'about-p1':                 "Je suis un développeur passionné avec de solides bases en ingénierie logicielle et un amour pour la création d'expériences numériques intuitives. Mon parcours a commencé par une curiosité sur le fonctionnement du web, qui s'est rapidement transformée en une carrière à part entière dans la création de produits que les gens aiment utiliser.",
+      'about-p2':                 "Au fil des années, j'ai travaillé sur la totalité de la pile — de la création d'interfaces pixel-perfect à la conception d'architectures back-end robustes. Je crois que le bon logiciel naît à l'intersection du code propre et du design réfléchi.",
+      'about-p3':                 "En dehors du travail, j'apprécie les contributions open-source, me tenir au courant des dernières actualités tech, et partager mes connaissances à travers l'écriture et le mentorat.",
+      'stat-experience':          "Ans d'expérience",
+      'stat-projects':            'Projets réalisés',
+      'stat-clients':             'Clients satisfaits',
+      'stat-opensource':          'Contributions Open-Source',
+      'services-title':           'Services',
+      'services-subtitle':        'Ce que je peux faire pour vous',
+      'service-webdev-title':     'Développement Web',
+      'service-webdev-desc':      "Développement complet de sites et d'applications web modernes et performants, en utilisant les dernières technologies et bonnes pratiques.",
+      'service-uiux-title':       'Design UI / UX',
+      'service-uiux-desc':        "Un design centré sur l'utilisateur qui transforme des exigences complexes en interfaces épurées et accessibles que vos utilisateurs apprécieront.",
+      'service-consulting-title': 'Conseil',
+      'service-consulting-desc':  "Des conseils techniques stratégiques pour aider votre équipe à faire les bons choix technologiques, améliorer l'architecture et accélérer la livraison.",
+      'service-perf-title':       'Optimisation des Performances',
+      'service-perf-desc':        "Audit et optimisation d'applications existantes pour la vitesse, la scalabilité et de meilleurs scores Core Web Vitals.",
+      'service-api-title':        'API & Back-End',
+      'service-api-desc':         "Conception et mise en œuvre d'APIs RESTful & GraphQL, de microservices et de systèmes back-end orientés base de données.",
+      'service-mentorship-title': 'Mentorat & Formation',
+      'service-mentorship-desc':  "Coaching individuel ou en équipe, revues de code et ateliers pour aider les développeurs à améliorer leurs compétences et leur confiance.",
+      'contact-title':            'Me Contacter',
+      'contact-subtitle':         'Travaillons ensemble — envoyez-moi un message',
+      'contact-email-label':      'E-mail',
+      'contact-location-label':   'Localisation',
+      'contact-location-value':   'Disponible dans le monde entier (Télétravail)',
+      'contact-phone-label':      'Téléphone',
+      'form-name-label':          'Nom complet',
+      'form-email-label':         'Adresse e-mail',
+      'form-subject-label':       'Sujet',
+      'form-message-label':       'Message',
+      'form-submit':              'Envoyer le message',
+      'placeholder-name':         'Votre nom',
+      'placeholder-email':        'vous@exemple.com',
+      'placeholder-subject':      'Comment puis-je vous aider ?',
+      'placeholder-message':      'Parlez-moi de votre projet ou question\u2026',
+      'footer-rights':            'Tous droits réservés.',
+      'footer-home':              'Accueil',
+      'footer-about':             'À propos',
+      'footer-services':          'Services',
+      'footer-contact':           'Contact',
+      'aria-open-menu':           'Ouvrir le menu',
+      'aria-back-to-top':         'Retour en haut',
+      'error-name':               'Veuillez entrer votre nom complet (au moins 2 caractères).',
+      'error-email':              'Veuillez entrer une adresse e-mail valide.',
+      'error-message':            'Veuillez entrer un message (au moins 10 caractères).',
+      'success-message':          '✓ Merci\u00a0! Votre message a été envoyé.',
+      'lang-toggle-text':         '🇬🇧 EN',
+      'lang-toggle-label':        'Switch to English'
+    },
+    en: {
+      'page-title':               'Alex — Personal Website',
+      'nav-home':                 'Home',
+      'nav-about':                'About',
+      'nav-services':             'Services',
+      'nav-contact':              'Contact',
+      'hero-greeting':            "Hello, I'm",
+      'hero-tagline':             'Developer · Designer · Problem Solver',
+      'hero-cta-learn':           'Learn More',
+      'hero-cta-contact':         'Get in Touch',
+      'about-title':              'Background',
+      'about-subtitle':           'Who I am & where I come from',
+      'about-p1':                 "I'm a passionate developer with a strong foundation in software engineering and a love for creating intuitive digital experiences. My journey started with a curiosity about how things work on the web, which quickly evolved into a full-fledged career building products people enjoy using.",
+      'about-p2':                 'Over the years I have worked across the full stack — from crafting pixel-perfect interfaces to designing robust back-end architectures. I believe great software is born at the intersection of clean code and thoughtful design.',
+      'about-p3':                 'Outside of work, I enjoy open-source contributions, staying up to date with the latest in tech, and sharing knowledge through writing and mentorship.',
+      'stat-experience':          'Years of Experience',
+      'stat-projects':            'Projects Completed',
+      'stat-clients':             'Happy Clients',
+      'stat-opensource':          'Open-Source Contributions',
+      'services-title':           'Services',
+      'services-subtitle':        'What I can do for you',
+      'service-webdev-title':     'Web Development',
+      'service-webdev-desc':      'End-to-end development of modern, performant websites and web applications using the latest technologies and best practices.',
+      'service-uiux-title':       'UI / UX Design',
+      'service-uiux-desc':        'User-centered design that transforms complex requirements into clean, accessible interfaces your users will love.',
+      'service-consulting-title': 'Consulting',
+      'service-consulting-desc':  'Strategic technical guidance to help your team make the right technology choices, improve architecture, and accelerate delivery.',
+      'service-perf-title':       'Performance Optimization',
+      'service-perf-desc':        'Auditing and optimizing existing applications for speed, scalability, and better Core Web Vitals scores.',
+      'service-api-title':        'API & Back-End',
+      'service-api-desc':         'Design and implementation of RESTful & GraphQL APIs, microservices, and database-driven back-end systems.',
+      'service-mentorship-title': 'Mentorship & Training',
+      'service-mentorship-desc':  'One-on-one or team coaching, code reviews, and workshops to help developers level up their skills and confidence.',
+      'contact-title':            'Contact Me',
+      'contact-subtitle':         "Let's work together — drop me a message",
+      'contact-email-label':      'Email',
+      'contact-location-label':   'Location',
+      'contact-location-value':   'Available Worldwide (Remote)',
+      'contact-phone-label':      'Phone',
+      'form-name-label':          'Full Name',
+      'form-email-label':         'Email Address',
+      'form-subject-label':       'Subject',
+      'form-message-label':       'Message',
+      'form-submit':              'Send Message',
+      'placeholder-name':         'Your name',
+      'placeholder-email':        'you@example.com',
+      'placeholder-subject':      'How can I help you?',
+      'placeholder-message':      'Tell me about your project or question\u2026',
+      'footer-rights':            'All rights reserved.',
+      'footer-home':              'Home',
+      'footer-about':             'About',
+      'footer-services':          'Services',
+      'footer-contact':           'Contact',
+      'aria-open-menu':           'Open menu',
+      'aria-back-to-top':         'Back to top',
+      'error-name':               'Please enter your full name (at least 2 characters).',
+      'error-email':              'Please enter a valid email address.',
+      'error-message':            'Please enter a message (at least 10 characters).',
+      'success-message':          '✓ Thank you! Your message has been sent.',
+      'lang-toggle-text':         '🇫🇷 FR',
+      'lang-toggle-label':        'Passer en français'
+    }
+  };
+
+  var DEFAULT_LANG = 'fr';
+  var currentLang = localStorage.getItem('lang') || DEFAULT_LANG;
+
+  function applyTranslations(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    // Text content
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    // Placeholder text
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    // aria-label attributes
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria-label');
+      if (t[key] !== undefined) el.setAttribute('aria-label', t[key]);
+    });
+
+    // Page title
+    document.title = t['page-title'] || document.title;
+
+    // HTML lang attribute
+    document.documentElement.lang = lang;
+
+    // Language toggle button
+    var langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+      langToggle.textContent = t['lang-toggle-text'];
+      langToggle.setAttribute('aria-label', t['lang-toggle-label']);
+    }
+  }
+
+  // Language toggle click handler
+  const langToggleBtn = document.getElementById('lang-toggle');
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function () {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      localStorage.setItem('lang', currentLang);
+      applyTranslations(currentLang);
+    });
+  }
+
+  // Apply language on page load
+  applyTranslations(currentLang);
 
   /* ----------------------------------------------------------
      Dynamic footer year
@@ -113,12 +295,13 @@
   }
 
   function validateForm() {
+    const t = translations[currentLang];
     let valid = true;
 
     // Name
     const name = document.getElementById('name');
     if (!name || name.value.trim().length < 2) {
-      showError('name', 'Please enter your full name (at least 2 characters).');
+      showError('name', t['error-name']);
       valid = false;
     } else {
       clearError('name');
@@ -128,7 +311,7 @@
     const email = document.getElementById('email');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
     if (!email || !emailRegex.test(email.value.trim())) {
-      showError('email', 'Please enter a valid email address.');
+      showError('email', t['error-email']);
       valid = false;
     } else {
       clearError('email');
@@ -137,7 +320,7 @@
     // Message
     const message = document.getElementById('message');
     if (!message || message.value.trim().length < 10) {
-      showError('message', 'Please enter a message (at least 10 characters).');
+      showError('message', t['error-message']);
       valid = false;
     } else {
       clearError('message');
@@ -161,9 +344,10 @@
   }
 
   function showSuccess() {
+    const t = translations[currentLang];
     const successEl = document.getElementById('form-success');
     if (!successEl) return;
-    successEl.textContent = '✓ Thank you! Your message has been sent.';
+    successEl.textContent = t['success-message'];
     setTimeout(function () {
       successEl.textContent = '';
     }, 6000);
