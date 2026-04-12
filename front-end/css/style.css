@@ -45,14 +45,23 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(8, 145, 178, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(22, 78, 99, 0.1) 0%, transparent 50%);
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(8, 145, 178, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(22, 78, 99, 0.1) 0%,
+      transparent 50%
+    );
   background-attachment: fixed;
   animation: gradientShift 15s ease infinite;
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 0%;
   }
   50% {
@@ -281,7 +290,13 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1a2332 30%, #164e63 60%, #0f172a 100%);
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1a2332 30%,
+    #164e63 60%,
+    #0f172a 100%
+  );
   background-size: 200% 200%;
   animation: gradientFlow 15s ease infinite;
   text-align: center;
@@ -291,13 +306,13 @@ ul {
 }
 
 @keyframes gradientFlow {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-}
 }
 
 .hero__content {
@@ -640,6 +655,14 @@ ul {
   gap: 0.35rem;
 }
 
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form__group label {
   font-size: 0.88rem;
   font-weight: 600;
@@ -691,6 +714,10 @@ ul {
   font-size: 0.95rem;
   color: var(--color-success);
   min-height: 1.5rem;
+}
+
+.form__success.is-error {
+  color: var(--color-error);
 }
 
 /* ============================================================

@@ -41,11 +41,14 @@
       "projects-title": "Mes Projets",
       "projects-subtitle": "Travaux concrets et expériences d'apprentissage",
       "project-1-title": "Interpréteur BOA",
-      "project-1-desc": "Projet académique collaboratif : construire un interpréteur Python complet en équipe. Gestion du parsing, de l'exécution et de la gestion de la mémoire.",
+      "project-1-desc":
+        "Projet académique collaboratif : construire un interpréteur Python complet en équipe. Gestion du parsing, de l'exécution et de la gestion de la mémoire.",
       "project-2-title": "GarageAutoTech",
-      "project-2-desc": "Page web pour un garage local. Présentation des services, portfolio de réalisations, et formulaire de contact. Première expérience avec un vrai client.",
+      "project-2-desc":
+        "Page web pour un garage local. Présentation des services, portfolio de réalisations, et formulaire de contact. Première expérience avec un vrai client.",
       "project-3-title": "Et plus à venir...",
-      "project-3-desc": "Je suis en formation constante. Nouveaux projets en cours : approfondissement React, backend Node.js, et bientôt MySQL. Objectif : construire des applications web complètes.",
+      "project-3-desc":
+        "Je suis en formation constante. Nouveaux projets en cours : approfondissement React, backend Node.js, et bientôt MySQL. Objectif : construire des applications web complètes.",
       "tag-python": "Python",
       "tag-team": "Équipe",
       "tag-html": "HTML/CSS",
@@ -80,7 +83,10 @@
         "Veuillez entrer votre nom complet (au moins 2 caractères).",
       "error-email": "Veuillez entrer une adresse e-mail valide.",
       "error-message": "Veuillez entrer un message (au moins 10 caractères).",
+      "sending-message": "Envoi en cours...",
       "success-message": "✓ Merci\u00a0! Votre message a été envoyé.",
+      "send-error-message":
+        "Impossible d'envoyer le message pour le moment. Réessayez plus tard.",
       "lang-toggle-text": "EN",
       "lang-toggle-label": "Switch to English",
     },
@@ -116,11 +122,14 @@
       "projects-title": "My Projects",
       "projects-subtitle": "Concrete work and learning experiences",
       "project-1-title": "BOA Interpreter",
-      "project-1-desc": "Collaborative academic project: building a complete Python interpreter as a team. Handling parsing, execution, and memory management.",
+      "project-1-desc":
+        "Collaborative academic project: building a complete Python interpreter as a team. Handling parsing, execution, and memory management.",
       "project-2-title": "GarageAutoTech",
-      "project-2-desc": "Website for a local garage. Showcasing services, portfolio of work, and contact form. First experience with a real client.",
+      "project-2-desc":
+        "Website for a local garage. Showcasing services, portfolio of work, and contact form. First experience with a real client.",
       "project-3-title": "And more to come...",
-      "project-3-desc": "I'm constantly learning. New projects in progress: deepening React skills, Node.js backend, and soon MySQL. Goal: build complete web applications.",
+      "project-3-desc":
+        "I'm constantly learning. New projects in progress: deepening React skills, Node.js backend, and soon MySQL. Goal: build complete web applications.",
       "tag-python": "Python",
       "tag-team": "Team",
       "tag-html": "HTML/CSS",
@@ -154,7 +163,10 @@
       "error-name": "Please enter your full name (at least 2 characters).",
       "error-email": "Please enter a valid email address.",
       "error-message": "Please enter a message (at least 10 characters).",
+      "sending-message": "Sending...",
       "success-message": "✓ Thank you! Your message has been sent.",
+      "send-error-message":
+        "Unable to send your message right now. Please try again later.",
       "lang-toggle-text": "FR",
       "lang-toggle-label": "Passer en français",
     },
@@ -300,11 +312,24 @@
   const form = document.getElementById("contact-form");
 
   if (form) {
-    form.addEventListener("submit", function (e) {
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
+      clearFormMessage();
+
       if (validateForm()) {
-        showSuccess();
-        form.reset();
+        setSubmitting(true, submitButton);
+
+        try {
+          await sendContactForm();
+          showSuccess();
+          form.reset();
+        } catch (error) {
+          showSendError(error && error.message ? error.message : "");
+        } finally {
+          setSubmitting(false, submitButton);
+        }
       }
     });
 
@@ -354,6 +379,41 @@
     return valid;
   }
 
+  async function sendContactForm() {
+    const payload = {
+      website: document.getElementById("website")?.value.trim() || "",
+      name: document.getElementById("name")?.value.trim() || "",
+      email: document.getElementById("email")?.value.trim() || "",
+      subject: document.getElementById("subject")?.value.trim() || "",
+      message: document.getElementById("message")?.value.trim() || "",
+    };
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json().catch(function () {
+      return null;
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        data && data.error ? data.error : "Failed to send contact form.",
+      );
+    }
+
+    return data;
+  }
+
+  function setSubmitting(isSubmitting, button) {
+    if (!button) return;
+    const t = translations[currentLang];
+    button.disabled = isSubmitting;
+    button.textContent = isSubmitting ? t["sending-message"] : t["form-submit"];
+  }
+
   function showError(fieldId, text) {
     const errorEl = document.getElementById(fieldId + "-error");
     const field = document.getElementById(fieldId);
@@ -372,10 +432,26 @@
     const t = translations[currentLang];
     const successEl = document.getElementById("form-success");
     if (!successEl) return;
+    successEl.classList.remove("is-error");
     successEl.textContent = t["success-message"];
     setTimeout(function () {
       successEl.textContent = "";
     }, 6000);
+  }
+
+  function showSendError(serverMessage) {
+    const t = translations[currentLang];
+    const successEl = document.getElementById("form-success");
+    if (!successEl) return;
+    successEl.classList.add("is-error");
+    successEl.textContent = serverMessage || t["send-error-message"];
+  }
+
+  function clearFormMessage() {
+    const successEl = document.getElementById("form-success");
+    if (!successEl) return;
+    successEl.classList.remove("is-error");
+    successEl.textContent = "";
   }
 
   /* ----------------------------------------------------------
