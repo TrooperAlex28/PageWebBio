@@ -70,18 +70,14 @@ Puis ouvrir:
 - Limitation de debit sur `POST /api/contact`:
   - 5 requetes maximum par IP toutes les 15 minutes.
 
-## Deploiement rapide (Render)
+## Deploiement rapide (Netlify)
 
 1. Pousser le projet sur GitHub.
-1. Sur Render, creer un nouveau `Web Service` depuis le repo.
-1. Configurer:
+1. Créer un nouveau site Netlify depuis le dépôt.
+1. Garder le dossier racine du projet comme base de publication.
+1. Vérifier que `netlify.toml` est présent à la racine.
+1. Ajouter les variables d'environnement dans Netlify > Site settings > Environment variables:
 
-- Build Command: `npm install`
-- Start Command: `npm start`
-
-1. Ajouter les variables d'environnement:
-
-- `PORT` (facultatif, Render le fournit)
 - `CONTACT_TO`
 - `SMTP_HOST`
 - `SMTP_PORT`
@@ -91,4 +87,12 @@ Puis ouvrir:
 - `CONTACT_FROM_NAME`
 - `CONTACT_FROM_EMAIL`
 
-1. Deployer puis tester `POST /api/contact`.
+1. Déployer le site.
+1. Tester le formulaire: il appelle maintenant `POST /api/contact`, réécrit vers la Netlify Function.
+
+## Fonctionnement Netlify
+
+- Le front reste statique.
+- `POST /api/contact` est redirigé vers `/.netlify/functions/contact`.
+- `GET /api/health` est redirigé vers `/.netlify/functions/health`.
+- En local, `npm start` continue de lancer le serveur Express pour les tests hors Netlify.
