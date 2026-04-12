@@ -2,24 +2,24 @@
    VARIABLES
    ============================================================ */
 :root {
-  --color-primary: #4f46e5;
-  --color-primary-dark: #3730a3;
-  --color-primary-light: #e0e7ff;
-  --color-accent: #818cf8;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8fafc;
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-border: #e2e8f0;
-  --color-success: #16a34a;
-  --color-error: #dc2626;
+  --color-primary: #0891b2;
+  --color-primary-dark: #0e7490;
+  --color-primary-light: #06b6d4;
+  --color-accent: #164e63;
+  --color-bg: #0f172a;
+  --color-bg-alt: #1a2332;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --color-success: #10b981;
+  --color-error: #ef4444;
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --radius: 0.75rem;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
-  --transition: 0.25s ease;
+  --radius: 1.2rem;
+  --shadow-sm: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(8, 145, 178, 0.15);
+  --shadow-lg: 0 20px 60px rgba(8, 145, 178, 0.2);
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============================================================
@@ -44,6 +44,20 @@ body {
   background: var(--color-bg);
   line-height: 1.7;
   overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(8, 145, 178, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(22, 78, 99, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 10% 10%;
+  }
 }
 
 a {
@@ -151,10 +165,10 @@ ul {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(8, 145, 178, 0.2);
   transition: box-shadow var(--transition);
 }
 .header.scrolled {
@@ -191,8 +205,8 @@ ul {
 }
 .nav__link:hover,
 .nav__link.active {
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: rgba(8, 145, 178, 0.15);
+  color: var(--color-primary-light);
 }
 
 /* Hamburger button */
@@ -267,10 +281,23 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f0f4ff 0%, #fafafe 60%, #fdf2ff 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1a2332 30%, #164e63 60%, #0f172a 100%);
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
   text-align: center;
   padding-top: 5rem;
   position: relative;
+  border-bottom: 1px solid rgba(8, 145, 178, 0.1);
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
 }
 
 .hero__content {
@@ -380,12 +407,21 @@ ul {
 }
 
 .skill-tag {
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
+  background: rgba(8, 145, 178, 0.12);
+  color: var(--color-primary-light);
   padding: 0.3rem 0.9rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 500;
+  border: 1px solid rgba(8, 145, 178, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition);
+}
+.skill-tag:hover {
+  background: rgba(8, 145, 178, 0.2);
+  border-color: rgba(8, 145, 178, 0.5);
+  transform: translateY(-2px);
 }
 
 .about__stats {
@@ -395,19 +431,25 @@ ul {
 }
 
 .stat-card {
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
+  background: rgba(26, 35, 50, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(8, 145, 178, 0.2);
   border-radius: var(--radius);
   padding: 1.75rem 1rem;
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   transition:
     box-shadow var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
 }
 .stat-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(8, 145, 178, 0.5);
+  background: rgba(26, 35, 50, 0.7);
 }
 
 .stat-card__number {
@@ -433,22 +475,26 @@ ul {
 }
 
 .project-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: rgba(26, 35, 50, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(8, 145, 178, 0.2);
   border-radius: var(--radius);
   padding: 2rem 1.75rem;
   box-shadow: var(--shadow-sm);
   transition:
     box-shadow var(--transition),
     transform var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    background var(--transition);
   display: flex;
   flex-direction: column;
 }
 .project-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
-  border-color: var(--color-accent);
+  transform: translateY(-8px);
+  border-color: rgba(8, 145, 178, 0.4);
+  background: rgba(26, 35, 50, 0.6);
 }
 
 .project-card__header {
@@ -469,13 +515,22 @@ ul {
 }
 
 .tag {
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
+  background: rgba(8, 145, 178, 0.15);
+  color: var(--color-primary-light);
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
+  border: 1px solid rgba(8, 145, 178, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition);
+}
+.tag:hover {
+  background: rgba(8, 145, 178, 0.25);
+  border-color: rgba(8, 145, 178, 0.6);
+  transform: scale(1.05);
 }
 
 .project-card__desc {
@@ -524,11 +579,19 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
+  background: rgba(26, 35, 50, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(8, 145, 178, 0.2);
   border-radius: var(--radius);
   padding: 1.1rem 1.25rem;
   box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+.contact-info-card:hover {
+  background: rgba(26, 35, 50, 0.6);
+  border-color: rgba(8, 145, 178, 0.4);
+  transform: translateY(-4px);
 }
 
 .contact-info-card__icon {
@@ -562,11 +625,13 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: rgba(26, 35, 50, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(8, 145, 178, 0.2);
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .form__group {
@@ -588,22 +653,26 @@ ul {
 .form__group textarea {
   width: 100%;
   padding: 0.7rem 1rem;
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid rgba(8, 145, 178, 0.2);
   border-radius: 0.5rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   color: var(--color-text);
-  background: var(--color-bg);
+  background: rgba(26, 35, 50, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition:
     border-color var(--transition),
-    box-shadow var(--transition);
+    box-shadow var(--transition),
+    background var(--transition);
   resize: vertical;
 }
 .form__group input:focus,
 .form__group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.2);
+  background: rgba(26, 35, 50, 0.5);
 }
 .form__group input.invalid,
 .form__group textarea.invalid {
