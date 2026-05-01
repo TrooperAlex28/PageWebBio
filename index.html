@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex — Site Personnel</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Alex — Visibilité locale et sites web qui convertissent</title>
+    <meta
+      name="description"
+      content="Pages web orientées visibilité locale, crédibilité et demandes qualifiées pour coachs, consultants et indépendants."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +15,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="front-end/css/style.css" />
-
-    />
   </head>
   <body>
     <!-- ===== NAVIGATION ===== -->
@@ -31,8 +32,11 @@
               >
             </li>
             <li>
+              <a href="#offer" class="nav__link" data-i18n="nav-offer">Offre</a>
+            </li>
+            <li>
               <a href="#projects" class="nav__link" data-i18n="nav-projects"
-                >Projets</a
+                >Démos</a
               >
             </li>
             <li>
@@ -70,18 +74,28 @@
           >
           <h1 class="hero__name">Alex</h1>
           <p class="hero__tagline" data-i18n="hero-tagline">
-            Développeur Web Junior | En formation | Passionné par l'efficacité
+            Je crée des pages web qui donnent plus de visibilité, de crédibilité
+            et de contacts aux professionnels indépendants.
+          </p>
+
+          <p class="hero__badge" data-i18n="hero-price">
+            Pack visibilité locale dès 250$
           </p>
           <div class="hero__cta">
-            <a href="#about" class="btn btn--primary" data-i18n="hero-cta-learn"
-              >En savoir plus</a
+            <a
+              href="#offer"
+              class="btn btn--primary"
+              data-i18n="hero-cta-primary"
             >
+              Voir l'approche
+            </a>
             <a
               href="#contact"
               class="btn btn--outline"
-              data-i18n="hero-cta-contact"
-              >Me contacter</a
+              data-i18n="hero-cta-secondary"
             >
+              Demander un audit
+            </a>
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true">
@@ -89,12 +103,94 @@
         </div>
       </section>
 
+      <section class="section" id="offer">
+        <div class="container">
+          <h2 class="section__title" data-i18n="offer-title">
+            Ce que votre présence en ligne doit faire
+          </h2>
+          <p class="section__subtitle" data-i18n="offer-subtitle">
+            Elle doit vous rendre visible, rassurer vos prospects et déclencher
+            un premier contact.
+          </p>
+
+          <div class="offer-grid">
+            <article class="offer-card">
+              <h3 class="offer-card__title" data-i18n="offer-card-1-title">
+                Être trouvé
+              </h3>
+              <p data-i18n="offer-card-1-desc">
+                Une base claire pour le référencement local et une lecture
+                rapide sur mobile.
+              </p>
+            </article>
+            <article class="offer-card">
+              <h3 class="offer-card__title" data-i18n="offer-card-2-title">
+                Inspirer confiance
+              </h3>
+              <p data-i18n="offer-card-2-desc">
+                Une proposition de valeur nette, des preuves visibles et un
+                design sérieux.
+              </p>
+            </article>
+            <article class="offer-card">
+              <h3 class="offer-card__title" data-i18n="offer-card-3-title">
+                Convertir
+              </h3>
+              <p data-i18n="offer-card-3-desc">
+                Un parcours simple vers la prise de contact, sans friction.
+              </p>
+            </article>
+          </div>
+
+          <div class="process-block">
+            <h3
+              class="section__title section__title--compact"
+              data-i18n="process-title"
+            >
+              Ma méthode en 3 étapes
+            </h3>
+            <p class="section__subtitle" data-i18n="process-subtitle">
+              Un cadre simple pour avancer vite sans perdre le message.
+            </p>
+
+            <div class="process-grid">
+              <div class="process-card">
+                <span class="process-card__number">1</span>
+                <h4 data-i18n="process-step-1-title">Audit rapide</h4>
+                <p data-i18n="process-step-1-desc">
+                  On clarifie votre activité, votre cible et le message à faire
+                  passer.
+                </p>
+              </div>
+              <div class="process-card">
+                <span class="process-card__number">2</span>
+                <h4 data-i18n="process-step-2-title">Structure et contenu</h4>
+                <p data-i18n="process-step-2-desc">
+                  Je construis une page qui met en avant vos services, vos
+                  preuves et votre contact.
+                </p>
+              </div>
+              <div class="process-card">
+                <span class="process-card__number">3</span>
+                <h4 data-i18n="process-step-3-title">Mise en ligne</h4>
+                <p data-i18n="process-step-3-desc">
+                  Vous recevez une page prête à être partagée et utilisée pour
+                  générer des demandes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===== ABOUT / BACKGROUND ===== -->
       <section class="about section" id="about">
         <div class="container">
-          <h2 class="section__title" data-i18n="about-title">Parcours</h2>
+          <h2 class="section__title" data-i18n="about-title">
+            Pourquoi travailler avec moi ?
+          </h2>
           <p class="section__subtitle" data-i18n="about-subtitle">
-            Qui je suis &amp; d'où je viens
+            Je transforme une présence en ligne en outil de crédibilité.
           </p>
 
           <div class="about__grid">
@@ -106,33 +202,29 @@
 
             <div class="about__text">
               <p data-i18n="about-p1">
-                Après 8 ans en tant qu'électromécanicien industriel, j'ai
-                découvert ma passion pour le développement logiciels. Cette
-                transition m'a donné une perspective unique : je comprends les
-                défis du terrain et je sais que le bon code peut vraiment
-                améliorer les processus.
+                Je viens d'un environnement où la rigueur, la clarté et
+                l'efficacité comptent vraiment. J'applique ce même cadre au web
+                pour construire des pages utiles, lisibles et rassurantes.
               </p>
               <p data-i18n="about-p2">
-                Je suis actuellement en formation comme développeur logiciels,
-                où j'apprends les fondamentaux du web et j'explore les
-                technologies modernes. Ma rigueur et mon expérience industrielle
-                me permettent d'aborder chaque projet avec sérieux et
-                pragmatisme.
+                Mon objectif n'est pas de faire une vitrine jolie seulement. Je
+                veux structurer votre message, guider vos visiteurs et augmenter
+                les demandes entrantes.
               </p>
               <p data-i18n="about-p3">
-                À court terme, je cherche à maîtriser le web dev. À long terme,
-                j'envisage de canaliser mes compétences vers l'Industrie 4.0 et
-                l'IT-OT pour optimiser les productions. Pour l'instant, je suis
-                enthousiaste à l'idée de travailler sur des projets web
-                concrets.
+                Si vous êtes indépendant et que vous voulez une présence
+                crédible sans passer par une grosse agence, je peux vous aider à
+                lancer un site clair, rapide et cohérent avec votre activité.
               </p>
 
               <ul class="about__skills">
-                <li class="skill-tag">Python</li>
-                <li class="skill-tag">HTML/CSS</li>
-                <li class="skill-tag">JavaScript</li>
-                <li class="skill-tag">MySQL (apprentissage)</li>
-                <li class="skill-tag">Linux</li>
+                <li class="skill-tag" data-i18n="skill-visibility">
+                  Visibilité locale
+                </li>
+                <li class="skill-tag" data-i18n="skill-html">HTML/CSS</li>
+                <li class="skill-tag" data-i18n="skill-js">JavaScript</li>
+                <li class="skill-tag" data-i18n="skill-seo">SEO de base</li>
+                <li class="skill-tag" data-i18n="skill-mobile">Mobile-first</li>
               </ul>
             </div>
           </div>
@@ -141,70 +233,148 @@
           <div class="about__stats">
             <div class="stat-card">
               <span class="stat-card__number" data-i18n="stat-number-1"
-                >8 ans</span
+                >Visibilité</span
               >
               <span class="stat-card__label" data-i18n="stat-experience"
-                >Expérience industrielle</span
+                >sur le web</span
               >
             </div>
             <div class="stat-card">
-              <span class="stat-card__number" data-i18n="stat-number-2">2</span>
+              <span class="stat-card__number" data-i18n="stat-number-2">4</span>
               <span class="stat-card__label" data-i18n="stat-projects"
-                >Projets concrets</span
+                >Démos à présenter</span
               >
             </div>
             <div class="stat-card">
-              <span class="stat-card__number" data-i18n="stat-number-3"
-                >En cours</span
-              >
+              <span class="stat-card__number" data-i18n="stat-number-3">1</span>
               <span class="stat-card__label" data-i18n="stat-clients"
-                >Formation DEV</span
+                >Objectif clair</span
               >
             </div>
             <div class="stat-card">
               <span class="stat-card__number" data-i18n="stat-number-4"
-                >IT-OT</span
+                >100%</span
               >
               <span class="stat-card__label" data-i18n="stat-opensource"
-                >Passion future</span
+                >Pensé mobile</span
               >
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== PROJETS ===== -->
-      <section class="projects section section--alt" id="projects">
+      <!-- ===== TEMPLATE PROJET ===== -->
+      <section class="template-demo section" id="template-demo">
         <div class="container">
-          <h2 class="section__title" data-i18n="projects-title">Mes Projets</h2>
+          <h2 class="section__title" data-i18n="project-5-title">Template projet — Exemple adaptable</h2>
+          <div class="template-demo__grid">
+            <article class="project-card template-demo-card">
+              <span class="template-demo__badge">Modèle adaptable</span>
+              <div class="project-card__header">
+                <h3 class="project-card__title" data-i18n="project-5-title">
+                  Template projet — Exemple adaptable
+                </h3>
+                <div class="project-card__tags">
+                  <span class="tag" data-i18n="tag-visibility">Visibilité</span>
+                  <span class="tag" data-i18n="tag-conversion">Conversion</span>
+                </div>
+              </div>
+              <p class="project-card__desc" data-i18n="project-5-desc">
+                Un modèle de page personnalisable pour tout secteur : structure claire, sections adaptables, design moderne. Parfait pour montrer le potentiel aux clients.
+              </p>
+              <div class="urls">
+                <a
+                  href="https://votrepageweb.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="project-link-live"
+                >
+                  → Voir la démo en ligne
+                </a>
+              </div>
+              <div class="project-card__links">
+                <a href="#contact" data-i18n="project-link-demo">
+                  → Demander ce modèle
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJETS ===== -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <h2 class="section__title" data-i18n="projects-title">
+            Démos à présenter
+          </h2>
           <p class="section__subtitle" data-i18n="projects-subtitle">
-            Travaux concrets et expériences d'apprentissage
+            Des exemples pensés pour vendre une solution, pas seulement montrer
+            du code.
+          </p>
+          <p class="section__note" data-i18n="projects-note">
+            Chaque démo peut être adaptée à votre secteur d'activité et besoin spécifique.
           </p>
 
           <div class="projects__grid">
             <article class="project-card">
               <div class="project-card__header">
                 <h3 class="project-card__title" data-i18n="project-1-title">
-                  Interpréteur BOA
+                  Photographe — Site démo portfolio
                 </h3>
                 <div class="project-card__tags">
-                  <span class="tag" data-i18n="tag-python">Python</span>
-                  <span class="tag" data-i18n="tag-team">Équipe</span>
+                  <span class="tag" data-i18n="tag-visibility">Visibilité</span>
+                  <span class="tag" data-i18n="tag-trust">Crédibilité</span>
+                  <span class="tag" data-i18n="tag-mobile">Mobile</span>
                 </div>
               </div>
               <p class="project-card__desc" data-i18n="project-1-desc">
-                Projet académique collaboratif : construire un interpréteur
-                Python complet en équipe. Gestion du parsing, de l'exécution et
-                de la gestion de la mémoire.
+                Portfolio moderne pour photographe : galerie photos, présentation, témoignages clients, formulaire de contact rapide. Optimisé pour le référencement local et la prise de rendez-vous.
               </p>
-              <div class="project-card__links">
+              <div class="urls">
                 <a
-                  href="https://github.com/TrooperAlex28/2025H-420-910-MA-Pithon"
+                  href="https://photographedemo.netlify.app/"
                   target="_blank"
                   rel="noopener"
-                  data-i18n="project-link-github"
+                  data-i18n="project-link-live"
                 >
-                  → Github
+                  → Voir la démo en ligne
+                </a>
+              </div>
+              <div class="project-card__links">
+                <a href="#contact" data-i18n="project-link-demo">
+                  → Demander ce modèle
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__header">
+                <h3 class="project-card__title" data-i18n="project-4-title">
+                  Garage premium — Image haut de gamme
+                </h3>
+                <div class="project-card__tags">
+                  <span class="tag" data-i18n="tag-local">Local</span>
+                  <span class="tag" data-i18n="tag-trust">Crédibilité</span>
+                  <span class="tag" data-i18n="tag-premium">Premium</span>
+                </div>
+              </div>
+              <p class="project-card__desc" data-i18n="project-4-desc">
+                Présentation élégante, prise de rendez-vous en ligne, galerie photos, avis clients, et mise en avant des services premium. Idéal pour une clientèle exigeante.
+              </p>
+              <div class="urls">
+                <a
+                  href="https://garagepremiumdemo.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="project-link-live"
+                >
+                  → Voir la démo en ligne
+                </a>
+              </div>
+              <div class="project-card__links">
+                <a href="#contact" data-i18n="project-link-demo">
+                  → Demander ce modèle
                 </a>
               </div>
             </article>
@@ -212,27 +382,30 @@
             <article class="project-card">
               <div class="project-card__header">
                 <h3 class="project-card__title" data-i18n="project-2-title">
-                  GarageAutoTech
+                  Petit restaurant — Menus & avis clients
                 </h3>
                 <div class="project-card__tags">
-                  <span class="tag" data-i18n="tag-html">HTML/CSS</span>
-                  <span class="tag" data-i18n="tag-js">JavaScript</span>
-                  <span class="tag" data-i18n="tag-client">Client</span>
+                  <span class="tag" data-i18n="tag-visibility">Visibilité</span>
+                  <span class="tag" data-i18n="tag-trust">Crédibilité</span>
                 </div>
               </div>
               <p class="project-card__desc" data-i18n="project-2-desc">
-                Page web pour un garage local. Présentation des services,
-                portfolio de réalisations, et formulaire de contact. Première
-                expérience avec un vrai client.
+                Présentation claire du menu, photos, avis Google intégrés, accès
+                direct à la réservation ou commande. Idéal pour attirer de
+                nouveaux clients locaux.
               </p>
-              <div class="project-card__links">
+              <div class="urls">
                 <a
-                  href="https://github.com/TrooperAlex28/web-garageAutoTech"
+                  href="https://restodemoplus.netlify.app//"
                   target="_blank"
                   rel="noopener"
-                  data-i18n="project-link-github"
+                  data-i18n="project-link-live"
                 >
-                  → Github
+                  → Voir la démo en ligne
+                </a>
+              <div class="project-card__links">
+                <a href="#contact" data-i18n="project-link-demo">
+                  → Demander ce modèle
                 </a>
               </div>
             </article>
@@ -240,27 +413,31 @@
             <article class="project-card">
               <div class="project-card__header">
                 <h3 class="project-card__title" data-i18n="project-3-title">
-                  Et plus à venir...
+                  Esthéticienne — Présence complète & prise de rendez-vous
                 </h3>
                 <div class="project-card__tags">
-                  <span class="tag" data-i18n="tag-learning"
-                    >Apprentissage</span
-                  >
+                  <span class="tag" data-i18n="tag-trust">Crédibilité</span>
+                  <span class="tag" data-i18n="tag-mobile">Mobile</span>
                 </div>
               </div>
               <p class="project-card__desc" data-i18n="project-3-desc">
-                Je suis en formation constante. Nouveaux projets en cours :
-                approfondissement React, backend Node.js, et bientôt MySQL.
-                Objectif : construire des applications web complètes.
+                Page complète : présentation, tarifs, galerie photos,
+                témoignages, prise de rendez-vous en ligne, liens réseaux
+                sociaux. Optimisée pour la confiance et la conversion.
               </p>
-              <div class="project-card__links">
+              <div class="urls">
                 <a
-                  href="https://github.com/TrooperAlex28/"
+                  href="https://esthetiquedemo.netlify.app/"
                   target="_blank"
                   rel="noopener"
-                  data-i18n="project-link-all"
+                  data-i18n="project-link-live"
                 >
-                  → Voir tous les projets
+                  → Voir la démo en ligne
+                </a>
+              </div>
+              <div class="project-card__links">
+                <a href="#contact" data-i18n="project-link-demo">
+                  → Demander ce modèle
                 </a>
               </div>
             </article>
@@ -271,9 +448,12 @@
       <!-- ===== CONTACT ===== -->
       <section class="contact section" id="contact">
         <div class="container">
-          <h2 class="section__title" data-i18n="contact-title">Me Contacter</h2>
+          <h2 class="section__title" data-i18n="contact-title">
+            Vous voulez la même chose ?
+          </h2>
           <p class="section__subtitle" data-i18n="contact-subtitle">
-            Travaillons ensemble — envoyez-moi un message
+            Décrivez votre activité et je vous dirai comment la rendre plus
+            crédible en ligne.
           </p>
 
           <div class="contact__grid">
@@ -414,7 +594,7 @@
                   type="text"
                   id="subject"
                   name="subject"
-                  placeholder="Comment puis-je vous aider ?"
+                  placeholder="Votre activité (coach, thérapeute, consultant...)"
                   data-i18n-placeholder="placeholder-subject"
                   autocomplete="off"
                 />
@@ -464,7 +644,8 @@
         <ul class="footer__links">
           <li><a href="#home" data-i18n="footer-home">Accueil</a></li>
           <li><a href="#about" data-i18n="footer-about">À propos</a></li>
-          <li><a href="#projects" data-i18n="footer-projects">Projets</a></li>
+          <li><a href="#offer" data-i18n="footer-offer">Offre</a></li>
+          <li><a href="#projects" data-i18n="footer-projects">Démos</a></li>
           <li><a href="#contact" data-i18n="footer-contact">Contact</a></li>
         </ul>
         <ul class="footer__social">
