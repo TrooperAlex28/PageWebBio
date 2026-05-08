@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex — Création de sites web professionnels qui génèrent des clients</title>
+    <title>
+      Alex — Création de sites web professionnels qui génèrent des clients
+    </title>
     <meta
       name="description"
       content="Création de sites web modernes, rapides et optimisés pour aider les entrepreneurs, travailleurs autonomes et petites entreprises à attirer plus de clients."
@@ -17,23 +19,31 @@
     <link rel="stylesheet" href="front-end/css/style.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link" data-i18n="skip-link"
+      >Aller au contenu principal</a
+    >
     <!-- ===== NAVIGATION ===== -->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#home" class="nav__logo">Alex</a>
+        <img
+          src="front-end/image/logo.png"
+          alt="Logo d'Alex"
+          class="nav__logo-icon"
+          aria-hidden="true"
+        />
+        <!-- <a href="#home" class="nav__logo">Alex</a> -->
         <div class="nav__end">
           <ul class="nav__list" id="nav-list">
             <li>
               <a href="#home" class="nav__link" data-i18n="nav-home">Accueil</a>
             </li>
+
             <li>
-              <a href="#about" class="nav__link" data-i18n="nav-about"
-                >À propos</a
+              <a href="#offer" class="nav__link" data-i18n="nav-offer"
+                >Approche</a
               >
             </li>
-            <li>
-              <a href="#offer" class="nav__link" data-i18n="nav-offer">Approche</a>
-            </li>
+
             <li>
               <a href="#projects" class="nav__link" data-i18n="nav-projects"
                 >Démos</a
@@ -56,6 +66,7 @@
         <button
           class="nav__toggle"
           id="nav-toggle"
+          aria-controls="nav-list"
           aria-label="Ouvrir le menu"
           aria-expanded="false"
           data-i18n-aria-label="aria-open-menu"
@@ -65,36 +76,56 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <!-- ===== HERO ===== -->
       <section class="hero section" id="home">
-        <div class="container hero__content">
-          <span class="hero__greeting" data-i18n="hero-greeting"
-            >Bonjour, je suis</span
-          >
-          <h1 class="hero__name">Alex</h1>
-          <p class="hero__tagline" data-i18n="hero-tagline">
-            Création de sites web professionnels qui génèrent des clients.
-          </p>
+        <div class="container">
+          <div class="hero__grid">
+            <div class="hero__avatar-wrap">
+              <div class="hero__avatar">
+                <img
+                  src="front-end/image/photoprofile.png"
+                  alt="Alex Carrière"
+                />
+              </div>
 
-          <p class="hero__badge" data-i18n="hero-price">
-            Modernes, rapides et optimisés
-          </p>
-          <div class="hero__cta">
-            <a
-              href="#offer"
-              class="btn btn--primary"
-              data-i18n="hero-cta-primary"
-            >
-              Demande de devis gratuite
-            </a>
-            <a
-              href="#contact"
-              class="btn btn--outline"
-              data-i18n="hero-cta-secondary"
-            >
-              Voir des exemples
-            </a>
+              <p class="hero__role" data-i18n="hero-role">Développeur web</p>
+            </div>
+            <div class="hero__content">
+              <span class="hero__greeting" data-i18n="hero-greeting"
+                >Bonjour, je suis</span
+              >
+              <h1 class="hero__name">Alex Carrière</h1>
+              <p class="hero__tagline" data-i18n="hero-tagline">
+                Un site web simple, professionnel et qui inspire confiance.
+              </p>
+              <p class="hero__subtitle" data-i18n="hero-subtitle">
+                Création de sites web modernes pour petites entreprises et
+                travailleurs autonomes.
+              </p>
+              <p class="hero__badge" data-i18n="hero-price">
+                Augmentez votre visibilité en ligne — à partir de 250 $ + taxes
+              </p>
+              <p class="hero__badge" data-i18n="hero-estimate">
+                Esimation gratuite et sans engagement
+              </p>
+              <div class="hero__cta">
+                <a
+                  href="#contact"
+                  class="btn btn--primary"
+                  data-i18n="hero-cta-primary"
+                >
+                  Parlons de votre projet
+                </a>
+                <a
+                  href="#projects"
+                  class="btn btn--outline"
+                  data-i18n="hero-cta-secondary"
+                >
+                  Voir des exemples
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true">
@@ -105,12 +136,11 @@
       <section class="section" id="offer">
         <div class="container">
           <h2 class="section__title" data-i18n="offer-title">
-            Votre présence en ligne mérite mieux qu’un simple site
+            Un site utile, pas juste une présence en ligne
           </h2>
           <p class="section__subtitle" data-i18n="offer-subtitle">
-            Je crée des sites web modernes, rapides et optimisés pour aider les
-            entrepreneurs, travailleurs autonomes et petites entreprises à
-            attirer plus de clients.
+            Je conçois des sites simples et efficaces qui inspirent confiance,
+            clarifient votre message et facilitent la prise de contact.
           </p>
 
           <div class="offer-grid">
@@ -138,14 +168,6 @@
                 Un site parfaitement adapté mobile, tablette et ordinateur.
               </p>
             </article>
-            <article class="offer-card">
-              <h3 class="offer-card__title" data-i18n="offer-card-4-title">
-                Optimisation conversion
-              </h3>
-              <p data-i18n="offer-card-4-desc">
-                Structure pensée pour transformer vos visiteurs en clients.
-              </p>
-            </article>
           </div>
 
           <div class="process-block">
@@ -156,8 +178,7 @@
               Pourquoi travailler avec moi ?
             </h3>
             <p class="section__subtitle" data-i18n="process-subtitle">
-              Une approche simple et efficace, une communication claire et des
-              solutions adaptées à votre budget.
+              Une méthode simple: écouter, structurer, livrer.
             </p>
 
             <div class="process-grid">
@@ -186,8 +207,26 @@
                 <span class="process-card__number">4</span>
                 <h4 data-i18n="process-step-4-title">Résultats concrets</h4>
                 <p data-i18n="process-step-4-desc">
-                  Chaque décision vise à améliorer la crédibilité et les
-                  conversions.
+                  Chaque décision vise à améliorer la crédibilité et la
+                  visibilité.
+                </p>
+              </div>
+              <div class="process-card">
+                <span class="process-card__number">5</span>
+                <h4 data-i18n="process-step-5-title">Délais rapides</h4>
+                <p data-i18n="process-step-5-desc">
+                  Un projet livré rapidement pour que vous puissiez en profiter
+                  au plus vite.
+                </p>
+              </div>
+              <div class="process-card">
+                <span class="process-card__number">6</span>
+                <h4 data-i18n="process-step-6-title">
+                  Support après livraison
+                </h4>
+                <p data-i18n="process-step-6-desc">
+                  Un accompagnement pour assurer que votre site continue à
+                  performer et à répondre à vos besoins.
                 </p>
               </div>
             </div>
@@ -200,17 +239,11 @@
         <div class="container">
           <h2 class="section__title" data-i18n="about-title">Pour qui ?</h2>
           <p class="section__subtitle" data-i18n="about-subtitle">
-            Pensé pour les activités qui veulent attirer plus de clients sans
-            gros budget.
+            Pensé pour les activités qui veulent une présence crédible sans
+            complexité.
           </p>
 
           <div class="about__grid">
-            <div class="about__avatar-wrap">
-              <div class="about__avatar">
-                <img src="front-end/image/photoprofile.png" alt="Alex" />
-              </div>
-            </div>
-
             <div class="about__text">
               <p data-i18n="about-p1">
                 Petites entreprises locales, travailleurs autonomes et
@@ -252,66 +285,29 @@
               >
             </div>
             <div class="stat-card">
-              <span class="stat-card__number" data-i18n="stat-number-2">Rapide</span>
+              <span class="stat-card__number" data-i18n="stat-number-2"
+                >Rapide</span
+              >
               <span class="stat-card__label" data-i18n="stat-projects"
                 >chargement optimisé</span
               >
             </div>
             <div class="stat-card">
-              <span class="stat-card__number" data-i18n="stat-number-3">Responsive</span>
+              <span class="stat-card__number" data-i18n="stat-number-3"
+                >Adapté</span
+              >
               <span class="stat-card__label" data-i18n="stat-clients"
                 >mobile, tablette, ordinateur</span
               >
             </div>
             <div class="stat-card">
-              <span class="stat-card__number" data-i18n="stat-number-4">Clair</span
+              <span class="stat-card__number" data-i18n="stat-number-4"
+                >Clair</span
               >
               <span class="stat-card__label" data-i18n="stat-opensource"
                 >message direct</span
               >
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== TEMPLATE PROJET ===== -->
-      <section class="template-demo section" id="template-demo">
-        <div class="container">
-          <h2 class="section__title" data-i18n="project-5-title">
-            Ce que vous obtenez
-          </h2>
-          <div class="template-demo__grid">
-            <article class="project-card template-demo-card">
-              <span class="template-demo__badge">Site professionnel</span>
-              <div class="project-card__header">
-                <h3 class="project-card__title" data-i18n="project-5-title">
-                  Un site qui travaille pour vous
-                </h3>
-                <div class="project-card__tags">
-                  <span class="tag" data-i18n="tag-credibility">Crédibilité</span>
-                  <span class="tag" data-i18n="tag-results">Clients</span>
-                </div>
-              </div>
-              <p class="project-card__desc" data-i18n="project-5-desc">
-                Un site professionnel, une meilleure image de marque, plus de
-                crédibilité et une base solide pour attirer des clients.
-              </p>
-              <div class="urls">
-                <a
-                  href="https://votrepageweb.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                  data-i18n="project-link-live"
-                >
-                  → Voir un exemple en ligne
-                </a>
-              </div>
-              <div class="project-card__links">
-                <a href="#contact" data-i18n="project-link-demo">
-                  → Demander un devis
-                </a>
-              </div>
-            </article>
           </div>
         </div>
       </section>
@@ -323,11 +319,10 @@
             Exemples de projets
           </h2>
           <p class="section__subtitle" data-i18n="projects-subtitle">
-            Des idées concrètes adaptées à différents profils et besoins.
+            Quelques pistes concrètes selon les besoins.
           </p>
           <p class="section__note" data-i18n="projects-note">
-            Chaque projet peut être adapté à votre secteur d'activité et à vos
-            objectifs.
+            Chaque exemple peut être ajusté à votre secteur et à vos objectifs.
           </p>
 
           <div class="projects__grid">
@@ -418,6 +413,7 @@
                 >
                   → Voir un exemple en ligne
                 </a>
+              </div>
               <div class="project-card__links">
                 <a href="#contact" data-i18n="project-link-demo">
                   → Demander un devis
@@ -463,10 +459,10 @@
       <section class="contact section" id="contact">
         <div class="container">
           <h2 class="section__title" data-i18n="contact-title">
-            Prêt à passer au niveau supérieur ?
+            Prêt à passer à l'action ?
           </h2>
           <p class="section__subtitle" data-i18n="contact-subtitle">
-            Discutons de votre projet et voyons comment je peux vous aider.
+            Parlons de votre projet et voyons ce qui peut le faire avancer.
           </p>
 
           <div class="contact__grid">
@@ -652,26 +648,13 @@
       <div class="container footer__inner">
         <p>
           &copy; <span id="footer-year"></span> Alex Carrière.
-          <span data-i18n="footer-rights">Tous droits réservés.</span>
+          <span data-i18n="footer-rights">Tous droits réservés. </span>
+          <span data-i18n="footer-location">
+            Développeur web freelance à Montréal
+          </span>
         </p>
-        <ul class="footer__links">
-          <li><a href="#home" data-i18n="footer-home">Accueil</a></li>
-          <li><a href="#about" data-i18n="footer-about">À propos</a></li>
-          <li><a href="#offer" data-i18n="footer-offer">Offre</a></li>
-          <li><a href="#projects" data-i18n="footer-projects">Démos</a></li>
-          <li><a href="#contact" data-i18n="footer-contact">Contact</a></li>
-        </ul>
+
         <ul class="footer__social">
-          <li>
-            <a
-              href="https://github.com/TrooperAlex28"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub"
-            >
-              GitHub
-            </a>
-          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/alex-carri%C3%A8re-3178796b/"

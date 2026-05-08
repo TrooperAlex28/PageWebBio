@@ -13,19 +13,25 @@
       "page-title":
         "Alex — Création de sites web professionnels qui génèrent des clients",
       "nav-home": "Accueil",
-      "nav-about": "À propos",
+      "nav-about": "Pour qui ?",
       "nav-offer": "Approche",
       "nav-projects": "Démos",
       "nav-contact": "Contact",
+      "skip-link": "Aller au contenu principal",
+      "hero-role": "Développeur web",
       "hero-greeting": "Bonjour, je suis",
       "hero-tagline":
-        "Création de sites web professionnels qui génèrent des clients.",
-      "hero-price": "Modernes, rapides et optimisés",
-      "hero-cta-primary": "Demande de devis gratuite",
+        "Concepteur de site web simple, professionnel et qui inspire confiance.",
+      "hero-subtitle":
+        "Création de sites web modernes pour petites entreprises et travailleurs autonomes.",
+      "hero-price":
+        "Augmentez votre visibilité en ligne — à partir de 250 $ + taxes",
+      "hero-estimate": "Esimation gratuite et sans engagement",
+      "hero-cta-primary": "Parlons de votre projet",
       "hero-cta-secondary": "Voir des exemples",
-      "offer-title": "Votre présence en ligne mérite mieux qu’un simple site",
+      "offer-title": "Un site utile, pas juste une présence en ligne",
       "offer-subtitle":
-        "Je crée des sites web modernes, rapides et optimisés pour aider les entrepreneurs, travailleurs autonomes et petites entreprises à attirer plus de clients.",
+        "Je conçois des sites simples et efficaces qui inspirent confiance, clarifient votre message et facilitent la prise de contact.",
       "offer-card-1-title": "Création de site web complet",
       "offer-card-1-desc":
         "Un site professionnel, adapté à votre image et à vos objectifs.",
@@ -39,8 +45,7 @@
       "offer-card-4-desc":
         "Structure pensée pour transformer vos visiteurs en clients.",
       "process-title": "Pourquoi travailler avec moi ?",
-      "process-subtitle":
-        "Une approche simple et efficace, une communication claire et des solutions adaptées à votre budget.",
+      "process-subtitle": "Une méthode simple: écouter, structurer, livrer.",
       "process-step-1-title": "Audit rapide",
       "process-step-1-desc":
         "Approche simple et efficace pour aller droit au but.",
@@ -53,6 +58,12 @@
       "process-step-4-title": "Résultats concrets",
       "process-step-4-desc":
         "Chaque décision vise à améliorer la crédibilité et les conversions.",
+      "process-step-5-title": "Délais rapide",
+      "process-step-5-desc":
+        "Un projet livré rapidement pour que vous puissiez en profiter au plus vite.",
+      "process-step-6-title": "Support après livraison",
+      "process-step-6-desc":
+        "Un accompagnement pour assurer que votre site continue à performer et à répondre à vos besoins.",
       "about-title": "Pour qui ?",
       "about-subtitle":
         "Pensé pour les activités qui veulent attirer plus de clients sans gros budget.",
@@ -73,13 +84,12 @@
       "stat-opensource": "message direct",
       "stat-number-1": "100%",
       "stat-number-2": "Rapide",
-      "stat-number-3": "Responsive",
+      "stat-number-3": "Adapté",
       "stat-number-4": "Clair",
       "projects-title": "Exemples de projets",
-      "projects-subtitle":
-        "Des idées concrètes adaptées à différents profils et besoins.",
+      "projects-subtitle": "Quelques pistes concrètes selon les besoins.",
       "projects-note":
-        "Chaque projet peut être adapté à votre secteur d'activité et à vos objectifs.",
+        "Chaque exemple peut être ajusté à votre secteur et à vos objectifs.",
       "project-1-title": "Artiste — Portfolio pour artistes",
       "project-1-desc":
         "Portfolio moderne pour photographe, tatoueur, artiste : galerie photos, présentation, formulaire de contact rapide. Optimisé pour le référencement local et la prise de rendez-vous.",
@@ -107,9 +117,9 @@
       "tag-results": "Résultats",
       "project-link-live": "→ Voir un exemple en ligne",
       "project-link-demo": "→ Demander un devis",
-      "contact-title": "Prêt à passer au niveau supérieur ?",
+      "contact-title": "Prêt à passer à l'action ?",
       "contact-subtitle":
-        "Discutons de votre projet et voyons comment je peux vous aider.",
+        "Parlons de votre projet et voyons ce qui peut le faire avancer.",
       "contact-email-label": "E-mail",
       "contact-location-label": "Localisation",
       "contact-location-value": "Disponible à distance",
@@ -125,12 +135,14 @@
         "Votre activité (coach, thérapeute, consultant...)",
       "placeholder-message": "Parlez-moi de votre projet ou question\u2026",
       "footer-rights": "Tous droits réservés.",
+      "footer-location": "Développeur web freelance à Montréal",
       "footer-home": "Accueil",
       "footer-about": "À propos",
       "footer-offer": "Approche",
       "footer-projects": "Exemples",
       "footer-contact": "Contact",
       "aria-open-menu": "Ouvrir le menu",
+      "aria-close-menu": "Fermer le menu",
       "aria-back-to-top": "Retour en haut",
       "error-name":
         "Veuillez entrer votre nom complet (au moins 2 caractères).",
@@ -146,19 +158,24 @@
     en: {
       "page-title": "Alex — Professional websites that generate clients",
       "nav-home": "Home",
-      "nav-about": "About",
+      "nav-about": "Who is it for?",
       "nav-offer": "Approach",
       "nav-projects": "Demos",
       "nav-contact": "Contact",
+      "skip-link": "Skip to main content",
+      "hero-role": "Web Developer",
       "hero-greeting": "Hello, I'm",
-      "hero-tagline": "Professional websites that generate clients.",
-      "hero-price": "Modern, fast, and optimized",
-      "hero-cta-primary": "Free quote request",
+      "hero-tagline":
+        "Simple, professional websites that inspire trust and get results.",
+      "hero-subtitle":
+        "Designing websites for small businesses to stand out online.",
+      "hero-price": "Boost your online visibility — starting at $250 + tax",
+      "hero-estimate": "Free estimate and no commitment",
+      "hero-cta-primary": "Let's talk about your project",
       "hero-cta-secondary": "See examples",
-      "offer-title":
-        "Your online presence deserves better than a simple website",
+      "offer-title": "A useful website, not just an online presence",
       "offer-subtitle":
-        "I create modern, fast, and optimized websites to help entrepreneurs, independent workers, and small businesses attract more clients.",
+        "I design simple, effective websites that build trust, clarify your message, and make contact easy.",
       "offer-card-1-title": "Full website creation",
       "offer-card-1-desc":
         "A professional site tailored to your image and goals.",
@@ -171,8 +188,7 @@
       "offer-card-4-desc":
         "Structure designed to turn your visitors into clients.",
       "process-title": "Why work with me?",
-      "process-subtitle":
-        "A simple and effective approach, clear communication, and solutions adapted to your budget.",
+      "process-subtitle": "A simple method: listen, structure, deliver.",
       "process-step-1-title": "Quick audit",
       "process-step-1-desc":
         "Simple and effective approach to get straight to the point.",
@@ -183,6 +199,12 @@
       "process-step-4-title": "Concrete results",
       "process-step-4-desc":
         "Every decision aims to improve credibility and conversions.",
+      "process-step-5-title": "Fast delivery",
+      "process-step-5-desc":
+        "A project delivered quickly so you can start benefiting from it as soon as possible.",
+      "process-step-6-title": "Support after delivery",
+      "process-step-6-desc":
+        "Support to ensure your site continues to perform and meet your needs.",
       "about-title": "Who is it for?",
       "about-subtitle":
         "Built for businesses that want more clients without a big budget.",
@@ -202,13 +224,13 @@
       "stat-opensource": "direct message",
       "stat-number-1": "100%",
       "stat-number-2": "Fast",
-      "stat-number-3": "Responsive",
+      "stat-number-3": "Adapted",
       "stat-number-4": "Clear",
       "projects-title": "Project examples",
       "projects-subtitle":
-        "Concrete ideas adapted to different profiles and needs.",
+        "A few concrete directions based on different needs.",
       "projects-note":
-        "Each project can be adapted to your industry and goals.",
+        "Each example can be adapted to your industry and goals.",
       "project-1-title": "Restaurant website",
       "project-1-desc":
         "Menu presentation, online booking, and practical information to attract more clients.",
@@ -235,9 +257,9 @@
       "tag-results": "Results",
       "project-link-live": "→ View an example online",
       "project-link-demo": "→ Request a quote",
-      "contact-title": "Ready to level up?",
+      "contact-title": "Ready to take action?",
       "contact-subtitle":
-        "Let's talk about your project and see how I can help.",
+        "Let's talk about your project and see what can move it forward.",
       "contact-email-label": "Email",
       "contact-location-label": "Location",
       "contact-location-value": "Available worldwide (Remote)",
@@ -252,12 +274,14 @@
       "placeholder-subject": "Your business (coach, therapist, consultant...)",
       "placeholder-message": "Tell me about your project or question\u2026",
       "footer-rights": "All rights reserved.",
+      "footer-location": "Freelance web developer based in Montreal",
       "footer-home": "Home",
       "footer-about": "About",
       "footer-offer": "Approach",
       "footer-projects": "Examples",
       "footer-contact": "Contact",
       "aria-open-menu": "Open menu",
+      "aria-close-menu": "Close menu",
       "aria-back-to-top": "Back to top",
       "error-name": "Please enter your full name (at least 2 characters).",
       "error-email": "Please enter a valid email address.",
@@ -307,6 +331,15 @@
     if (langToggle) {
       langToggle.textContent = t["lang-toggle-text"];
       langToggle.setAttribute("aria-label", t["lang-toggle-label"]);
+    }
+
+    var navToggleEl = document.getElementById("nav-toggle");
+    if (navToggleEl) {
+      var isExpanded = navToggleEl.getAttribute("aria-expanded") === "true";
+      navToggleEl.setAttribute(
+        "aria-label",
+        t[isExpanded ? "aria-close-menu" : "aria-open-menu"],
+      );
     }
   }
 
@@ -375,19 +408,59 @@
   const navList = document.getElementById("nav-list");
 
   if (navToggle && navList) {
-    navToggle.addEventListener("click", function () {
+    function closeNavMenu() {
+      navList.classList.remove("open");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute(
+        "aria-label",
+        translations[currentLang]["aria-open-menu"],
+      );
+      document.body.classList.remove("nav-open");
+    }
+
+    function toggleNavMenu() {
       const isOpen = navList.classList.toggle("open");
       navToggle.classList.toggle("open", isOpen);
       navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
+      navToggle.setAttribute(
+        "aria-label",
+        translations[currentLang][
+          isOpen ? "aria-close-menu" : "aria-open-menu"
+        ],
+      );
+      document.body.classList.toggle("nav-open", isOpen);
+    }
+
+    navToggle.addEventListener("click", toggleNavMenu);
 
     // Close menu when a link is clicked
     navList.querySelectorAll(".nav__link").forEach(function (link) {
       link.addEventListener("click", function () {
-        navList.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
+        closeNavMenu();
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && navList.classList.contains("open")) {
+        closeNavMenu();
+        navToggle.focus();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!navList.classList.contains("open")) return;
+      const clickedInsideMenu = navList.contains(event.target);
+      const clickedToggle = navToggle.contains(event.target);
+      if (!clickedInsideMenu && !clickedToggle) {
+        closeNavMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 600 && navList.classList.contains("open")) {
+        closeNavMenu();
+      }
     });
   }
 
