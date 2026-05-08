@@ -1103,6 +1103,22 @@ ul {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 820px) and (min-width: 769px) {
+  .hero__avatar-wrap {
+    width: 220px;
+    flex: 0 0 220px;
+  }
+
+  .hero__avatar {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero__content {
+    padding-right: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .hero__grid {
     gap: 2rem;
@@ -1315,5 +1331,22 @@ ul {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* iPad mini specific adjustment */
+@media (max-width: 768px) and (min-width: 601px) {
+  .hero__avatar-wrap {
+    width: 200px;
+    flex: 0 0 200px;
+  }
+
+  .hero__avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero__content {
+    padding-right: 1rem;
   }
 }
