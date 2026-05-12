@@ -25,7 +25,7 @@
       "hero-subtitle":
         "Création de sites web modernes pour petites entreprises et travailleurs autonomes.",
       "hero-price":
-        "Augmentez votre visibilité en ligne — à partir de 250 $ + taxes",
+        "Augmentez votre visibilité en ligne — à partir de 250 $",
       "hero-estimate": "Esimation gratuite et sans engagement",
       "hero-cta-primary": "Parlons de votre projet",
       "hero-cta-secondary": "Voir des exemples",
@@ -169,7 +169,7 @@
         "Simple, professional websites that inspire trust and get results.",
       "hero-subtitle":
         "Designing websites for small businesses to stand out online.",
-      "hero-price": "Boost your online visibility — starting at $250 + tax",
+      "hero-price": "Boost your online visibility — starting at $250",
       "hero-estimate": "Free estimate and no commitment",
       "hero-cta-primary": "Let's talk about your project",
       "hero-cta-secondary": "See examples",
