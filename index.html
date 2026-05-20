@@ -28,6 +28,23 @@
       integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg=="
       crossorigin="anonymous"
     ></script>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self';"
+    />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com;"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self'; 
+  script-src 'self' https://static.cloudflareinsights.com; 
+  style-src 'self' https://fonts.googleapis.com 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=';
+"
+    />
   </head>
   <body>
     <a href="#main-content" class="skip-link" data-i18n="skip-link"
