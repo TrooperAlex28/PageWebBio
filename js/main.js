@@ -24,9 +24,8 @@
         "Concepteur de site web simple, professionnel et qui inspire confiance.",
       "hero-subtitle":
         "Création de sites web modernes pour petites entreprises et travailleurs autonomes.",
-      "hero-price":
-        "Augmentez votre visibilité en ligne — à partir de 250 $",
-      "hero-estimate": "Esimation gratuite et sans engagement",
+      "hero-price": "Augmentez votre visibilité en ligne — à partir de 250 $",
+      "hero-estimate": "Estimation gratuite et sans engagement",
       "hero-cta-primary": "Parlons de votre projet",
       "hero-cta-secondary": "Voir des exemples",
       "offer-title": "Un site utile, pas juste une présence en ligne",

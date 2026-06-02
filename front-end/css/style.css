@@ -8,7 +8,8 @@
   --color-accent: #7a9fb5;
   --color-bg: #0f1419;
   --color-bg-alt: #1a2330;
-  --color-text: #f0f2f5;
+  --color-text: #e6e9ec;
+  --color-text-outline: rgba(220, 224, 228, 0.42);
   --color-text-muted: #b0b8c4;
   --color-border: #2d3a48;
   --color-success: #6ba587;
@@ -75,6 +76,30 @@ section {
 
 body.nav-open {
   overflow: hidden;
+}
+
+/* Pale gray text + subtle pale outline */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+.section__title,
+.section__subtitle,
+.section__note,
+.project-card__desc,
+.offer-card p,
+.about__text p,
+.hero__name,
+.hero__tagline,
+.hero__subtitle {
+  color: var(--color-text);
+  -webkit-text-stroke: 0.28px var(--color-text-outline);
+  text-shadow: 0 0 1px var(--color-text-outline);
 }
 
 @keyframes gradientShift {
