@@ -11,23 +11,32 @@
   const translations = {
     fr: {
       "page-title":
-        "Alex — Création de sites web professionnels qui génèrent des clients",
+        "ACDevWeb — Création de sites web modernes, rapides et optimisés pour entrepreneurs, travailleurs autonomes et petites entreprises",
       "nav-home": "Accueil",
       "nav-about": "Pour qui ?",
       "nav-offer": "Approche",
+      "nav-pricing": "Tarifs",
+      "nav-faq": "FAQ",
       "nav-projects": "Démos",
       "nav-contact": "Contact",
       "skip-link": "Aller au contenu principal",
+      "nav-logo-alt": "Logo d'ACDevWeb",
+      "hero-name": "Alex Carrière",
+      "hero-avatar-alt": "Alex Carrière",
+      "footer-name": "Alex Carrière",
+      "website-label": "Website",
       "hero-role": "Développeur web",
       "hero-greeting": "Bonjour, je suis",
       "hero-tagline":
-        "Concepteur de site web simple, professionnel et qui inspire confiance.",
+        "Je vous propose un site web qui transforme vos visiteurs en clients — sans la complexité.",
       "hero-subtitle":
-        "Création de sites web modernes pour petites entreprises et travailleurs autonomes.",
-      "hero-price": "Augmentez votre visibilité en ligne — à partir de 250 $",
+        "Une présence en ligne professionnelle et percutante, conçue sur mesure pour les travailleurs autonomes et entrepreneurs locaux.",
+      "hero-price":
+        "Augmentez votre visibilité en ligne — page simple à partir de 250 $",
       "hero-estimate": "Estimation gratuite et sans engagement",
-      "hero-cta-primary": "Parlons de votre projet",
-      "hero-cta-secondary": "Voir des exemples",
+      "hero-cta-primary": "Discuter de mon projet",
+      "hero-cta-secondary": "Voir les exemples de projets",
+      "hero-cta-pricing": "Voir le détail des tarifs",
       "offer-title": "Un site utile, pas juste une présence en ligne",
       "offer-subtitle":
         "Je conçois des sites simples et efficaces qui inspirent confiance, clarifient votre message et facilitent la prise de contact.",
@@ -43,21 +52,58 @@
       "offer-card-4-title": "Optimisation conversion",
       "offer-card-4-desc":
         "Structure pensée pour transformer vos visiteurs en clients.",
+      "pricing-title": "Des tarifs simples et transparents",
+      "pricing-subtitle":
+        "Un forfait de base solide et des options selon vos besoins réels.",
+      "pricing-base-kicker": "Idéal pour démarrer",
+      "pricing-base-title": "Forfait Site Vitrine",
+      "pricing-base-price": "250 $",
+      "pricing-base-feature-1": "✓ Conception & développement (Page unique)",
+      "pricing-base-feature-2": "✓ Design responsive (Adapté mobile/tablette)",
+      "pricing-base-feature-3": "✓ Optimisation de base (Vitesse & SEO local)",
+      "pricing-base-feature-4": "✓ Mise en ligne sur votre hébergeur",
+      "pricing-base-feature-5": "✓ Formation de base pour gérer votre site",
+      "pricing-base-feature-6":
+        "✓ Deux (2) rondes de révisions sont incluses. Toute demande supplémentaire ou modification de structure après validation sera facturée au tarif horaire de 50 $/h.",
+      "pricing-options-title": "Options à la carte",
+      "pricing-options-subtitle":
+        "Ajoutez uniquement ce dont votre activité a besoin :",
+      "pricing-option-1": "Formulaire de contact personnalisé",
+      "pricing-option-1-price": "+60 $",
+      "pricing-option-2": "Galerie photos / Portfolio",
+      "pricing-option-2-price": "+60 $",
+      "pricing-option-3": "Intégration Google Maps interactive",
+      "pricing-option-3-price": "+30 $",
+      "pricing-option-4": "Effets visuels et animations modernes",
+      "pricing-option-4-price": "+90 $",
+      "pricing-option-5": "Option Autonomie / Modification des textes facile",
+      "pricing-option-5-price": "+50 $",
+      "pricing-note": "* Statut de petit fournisseur — Taxes non applicables.",
+      "faq-title": "Questions fréquentes",
+      "faq-subtitle":
+        "Les réponses aux questions les plus courantes avant de démarrer.",
+      "faq-q1":
+        "Le prix de 250 $ inclut-il l'hébergement et le nom de domaine ?",
+      "faq-a1":
+        "Non, les frais d'hébergement et de nom de domaine (environ 50$ à 80$/an) sont à votre charge, mais je vous accompagne pas-à-pas pour les configurer à votre nom afin que vous restiez 100% propriétaire de votre site.",
+      "faq-q2": "Pourrai-je modifier le texte de mon site moi-même plus tard ?",
+      "faq-a2":
+        'Le site est fixe à la base, vous pouvez me demander des modifications ponctuelles, ou ajouter l\'option "Autonomie" pour pouvoir modifier le texte vous-même facilement.',
       "process-title": "Pourquoi travailler avec moi ?",
       "process-subtitle": "Une méthode simple: écouter, structurer, livrer.",
-      "process-step-1-title": "Audit rapide",
+      "process-step-1-title": "Zéro jargon technique",
       "process-step-1-desc":
-        "Approche simple et efficace pour aller droit au but.",
+        "On parle de votre entreprise, de vos services et de vos objectifs. Pas de code compliqué, juste de l'efficacité.",
       "process-step-2-title": "Communication claire",
       "process-step-2-desc":
         "Un échange rapide et transparent pour rester alignés.",
-      "process-step-3-title": "Solutions adaptées",
+      "process-step-3-title": "Rentable dès le départ",
       "process-step-3-desc":
-        "Un projet pensé pour votre budget et votre réalité.",
-      "process-step-4-title": "Résultats concrets",
+        "Un site pensé pour respecter le budget d'un projet qui se lance, sans frais cachés ni mauvaise surprise.",
+      "process-step-4-title": "Conçu pour convertir",
       "process-step-4-desc":
-        "Chaque décision vise à améliorer la crédibilité et les conversions.",
-      "process-step-5-title": "Délais rapide",
+        "Chaque section et chaque bouton sont optimisés pour inciter vos visiteurs à vous appeler ou à vous écrire.",
+      "process-step-5-title": "Délais rapides",
       "process-step-5-desc":
         "Un projet livré rapidement pour que vous puissiez en profiter au plus vite.",
       "process-step-6-title": "Support après livraison",
@@ -65,13 +111,13 @@
         "Un accompagnement pour assurer que votre site continue à performer et à répondre à vos besoins.",
       "about-title": "Pour qui ?",
       "about-subtitle":
-        "Pensé pour les activités qui veulent attirer plus de clients sans gros budget.",
+        "Pensé pour les activités qui veulent une présence crédible sans complexité.",
       "about-p1":
-        "Petites entreprises locales, travailleurs autonomes et commerçants qui ont besoin d’un site clair et efficace.",
+        "Vous êtes un expert dans votre domaine, mais votre site actuel ne le montre pas ? Je crée des vitrines modernes pour les professionnels qui veulent être crédibles en ligne immédiatement.",
       "about-p2":
-        "Artistes, photographes et freelances qui veulent une vitrine moderne pour présenter leur travail.",
+        "Que vous offriez des services à domicile, des consultations ou que vous gériez un commerce local, votre site doit travailler pour vous et vous amener des demandes.",
       "about-p3":
-        "Des solutions simples, intelligentes et orientées présence en ligne.",
+        "Pas de fioritures inutiles : uniquement ce qui fonctionne pour propulser votre visibilité à Montréal.",
       "skill-visibility": "Petites entreprises",
       "skill-html": "Travailleurs autonomes",
       "skill-js": "Artistes / photographes",
@@ -89,32 +135,28 @@
       "projects-subtitle": "Quelques pistes concrètes selon les besoins.",
       "projects-note":
         "Chaque exemple peut être ajusté à votre secteur et à vos objectifs.",
-      "project-1-title": "Artiste — Portfolio pour artistes",
+      "project-1-title": "Site pour restaurant",
       "project-1-desc":
-        "Portfolio moderne pour photographe, tatoueur, artiste : galerie photos, présentation, formulaire de contact rapide. Optimisé pour le référencement local et la prise de rendez-vous.",
-      "project-2-title": "Boutique locale, café, restaurant",
+        "Présentation du menu, réservation en ligne et informations pratiques pour attirer plus de clients.",
+      "project-2-title": "Boutique locale",
       "project-2-desc":
-        "Mise en valeur des produits, informations pratiques et appel à l'action clair pour faciliter la visite ou l’achat.",
-      "project-3-title":
-        "travailleur autonome, esthéticienne, coach, consultant...",
+        "Mise en valeur des produits, informations pratiques et appel à l’action clair pour faciliter la visite ou l’achat.",
+      "project-3-title": "Freelance / travailleur autonome",
       "project-3-desc":
         "Page simple, rapide et professionnelle pour présenter vos services et obtenir plus de demandes.",
-      "project-4-title": "Service — Information clair et prises de contacts",
+      "project-4-title": "Portfolio photographe",
       "project-4-desc":
-        "Présentation élégante, prise de rendez-vous facile, integration de Google Maps, mise en avant des services. Idéal pour une clientèle recherchant un service de qualité.",
-      "tag-premium": "Professionnel",
-      "project-5-title": "Batissons ensemble votre présence en lignes",
-      "project-5-desc":
-        "Un site professionnel, une meilleure image de marque, plus de crédibilité et une base solide pour attirer des clients. Créons ensemble une page qui travaille pour vous.",
+        "Galerie moderne, présentation claire et prise de contact rapide pour transformer les visiteurs en demandes.",
+      "tag-premium": "Rapide",
       "tag-visibility": "Visibilité",
       "tag-trust": "Crédibilité",
       "tag-conversion": "Clients",
       "tag-reassurance": "Confiance",
-      "tag-local": "Local",
-      "tag-mobile": "Contact rapide",
+      "tag-local": "Galerie",
+      "tag-mobile": "Mobile",
       "tag-credibility": "Crédibilité",
       "tag-results": "Résultats",
-      "project-link-live": "→ Voir un exemple en ligne",
+      "project-link-live": "→ Tester la démo en direct",
       "project-link-demo": "→ Demander un devis",
       "contact-title": "Prêt à passer à l'action ?",
       "contact-subtitle":
@@ -122,7 +164,10 @@
       "contact-email-label": "E-mail",
       "contact-location-label": "Localisation",
       "contact-location-value": "Disponible à distance",
+      "contact-facebook-label": "Facebook Messenger",
       "contact-phone-label": "Téléphone",
+      "social-facebook-text": "Facebook",
+      "social-linkedin-text": "LinkedIn",
       "form-name-label": "Nom complet",
       "form-email-label": "Adresse e-mail",
       "form-subject-label": "Sujet",
@@ -155,23 +200,33 @@
       "lang-toggle-label": "Switch to English",
     },
     en: {
-      "page-title": "Alex — Professional websites that generate clients",
+      "page-title":
+        "ACDevWeb — Modern, fast, optimized websites for entrepreneurs, freelancers, and small businesses",
       "nav-home": "Home",
       "nav-about": "Who is it for?",
       "nav-offer": "Approach",
+      "nav-pricing": "Pricing",
+      "nav-faq": "FAQ",
       "nav-projects": "Demos",
       "nav-contact": "Contact",
       "skip-link": "Skip to main content",
+      "nav-logo-alt": "ACDevWeb logo",
+      "hero-name": "Alex Carrière",
+      "hero-avatar-alt": "Alex Carrière",
+      "footer-name": "Alex Carrière",
+      "website-label": "Website",
       "hero-role": "Web Developer",
       "hero-greeting": "Hello, I'm",
       "hero-tagline":
-        "Simple, professional websites that inspire trust and get results.",
+        "I create websites that turn your visitors into clients - without the complexity.",
       "hero-subtitle":
-        "Designing websites for small businesses to stand out online.",
-      "hero-price": "Boost your online visibility — starting at $250",
+        "A professional, impactful online presence tailored for independent workers and local entrepreneurs.",
+      "hero-price":
+        "Boost your online visibility — single-page sites starting at $250",
       "hero-estimate": "Free estimate and no commitment",
-      "hero-cta-primary": "Let's talk about your project",
-      "hero-cta-secondary": "See examples",
+      "hero-cta-primary": "Discuss my project",
+      "hero-cta-secondary": "See project examples",
+      "hero-cta-pricing": "See pricing details",
       "offer-title": "A useful website, not just an online presence",
       "offer-subtitle":
         "I design simple, effective websites that build trust, clarify your message, and make contact easy.",
@@ -186,18 +241,53 @@
       "offer-card-4-title": "Conversion optimization",
       "offer-card-4-desc":
         "Structure designed to turn your visitors into clients.",
+      "pricing-title": "Simple and transparent pricing",
+      "pricing-subtitle":
+        "A solid base package and add-ons based on your real needs.",
+      "pricing-base-kicker": "Ideal to get started",
+      "pricing-base-title": "Showcase Website Package",
+      "pricing-base-price": "$250",
+      "pricing-base-feature-1": "✓ Design & development (single page)",
+      "pricing-base-feature-2": "✓ Responsive design (mobile/tablet friendly)",
+      "pricing-base-feature-3": "✓ Basic optimization (speed & local SEO)",
+      "pricing-base-feature-4": "✓ Deployment on your hosting",
+      "pricing-base-feature-5": "✓ Basic training to manage your site",
+      "pricing-base-feature-6":
+        "✓ Two (2) rounds of revisions are included. Any additional request or structural change after approval will be billed at the hourly rate of $50/hour.",
+      "pricing-options-title": "A la carte options",
+      "pricing-options-subtitle": "Add only what your business actually needs:",
+      "pricing-option-1": "Custom contact form",
+      "pricing-option-1-price": "+$60",
+      "pricing-option-2": "Photo gallery / portfolio",
+      "pricing-option-2-price": "+$60",
+      "pricing-option-3": "Interactive Google Maps integration",
+      "pricing-option-3-price": "+$30",
+      "pricing-option-4": "Modern visual effects and animations",
+      "pricing-option-4-price": "+$90",
+      "pricing-option-5": "Self-editing option / Easy text editing",
+      "pricing-option-5-price": "+$50",
+      "pricing-note": "* Small supplier status — taxes not applicable.",
+      "faq-title": "Frequently Asked Questions",
+      "faq-subtitle":
+        "Answers to the most common questions before getting started.",
+      "faq-q1": "Does the $250 price include hosting and the domain name?",
+      "faq-a1":
+        "No, hosting and domain fees (around $50 to $80/year) are your responsibility, but I guide you step by step to set them up in your name so you remain 100% the owner of your site.",
+      "faq-q2": "Will I be able to edit my website text myself later on?",
+      "faq-a2":
+        'The site is fixed by default, but you can request occasional changes, or add the "Autonomy" option so you can easily edit the text yourself later.',
       "process-title": "Why work with me?",
       "process-subtitle": "A simple method: listen, structure, deliver.",
-      "process-step-1-title": "Quick audit",
+      "process-step-1-title": "No technical jargon",
       "process-step-1-desc":
-        "Simple and effective approach to get straight to the point.",
+        "We talk about your business, your services, and your goals. No complicated code, just efficiency.",
       "process-step-2-title": "Clear communication",
       "process-step-2-desc": "Fast, transparent exchanges so we stay aligned.",
-      "process-step-3-title": "Budget-friendly solutions",
+      "process-step-3-title": "Profitable from day one",
       "process-step-3-desc": "A project built around your reality and budget.",
-      "process-step-4-title": "Concrete results",
+      "process-step-4-title": "Built to convert",
       "process-step-4-desc":
-        "Every decision aims to improve credibility and conversions.",
+        "Every section and every button is optimized to prompt your visitors to call or message you.",
       "process-step-5-title": "Fast delivery",
       "process-step-5-desc":
         "A project delivered quickly so you can start benefiting from it as soon as possible.",
@@ -206,12 +296,13 @@
         "Support to ensure your site continues to perform and meet your needs.",
       "about-title": "Who is it for?",
       "about-subtitle":
-        "Built for businesses that want more clients without a big budget.",
+        "Built for businesses that want a credible presence without complexity.",
       "about-p1":
-        "Local small businesses, independent workers, and shop owners who need a clear and effective website.",
+        "You know your craft, but your current website does not show it? I create modern showcases for professionals who want to look credible online right away.",
       "about-p2":
-        "Artists, photographers, and freelancers who want a modern showcase for their work.",
-      "about-p3": "Simple, intelligent solutions focused on online presence.",
+        "Whether you offer home services, consultations, or run a local shop, your website should work for you and bring in inquiries.",
+      "about-p3":
+        "No unnecessary fluff: only what works to boost your visibility in Montreal.",
       "skill-visibility": "Small businesses",
       "skill-html": "Independent workers",
       "skill-js": "Artists / photographers",
@@ -251,10 +342,10 @@
       "tag-conversion": "Clients",
       "tag-reassurance": "Trust",
       "tag-local": "Gallery",
-      "tag-mobile": "Contact",
+      "tag-mobile": "Mobile",
       "tag-credibility": "Credibility",
       "tag-results": "Results",
-      "project-link-live": "→ View an example online",
+      "project-link-live": "→ Test the live demo",
       "project-link-demo": "→ Request a quote",
       "contact-title": "Ready to take action?",
       "contact-subtitle":
@@ -262,7 +353,10 @@
       "contact-email-label": "Email",
       "contact-location-label": "Location",
       "contact-location-value": "Available worldwide (Remote)",
+      "contact-facebook-label": "Facebook Messenger",
       "contact-phone-label": "Phone",
+      "social-facebook-text": "Facebook",
+      "social-linkedin-text": "LinkedIn",
       "form-name-label": "Full Name",
       "form-email-label": "Email Address",
       "form-subject-label": "Subject",
@@ -311,6 +405,12 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var key = el.getAttribute("data-i18n-placeholder");
       if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    // Alt text
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      if (t[key] !== undefined) el.setAttribute("alt", t[key]);
     });
 
     // aria-label attributes

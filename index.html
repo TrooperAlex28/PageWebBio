@@ -32,6 +32,7 @@
           alt="Logo d'Alex"
           class="nav__logo-icon"
           aria-hidden="true"
+          data-i18n-alt="nav-logo-alt"
         />
         <!-- <a href="#home" class="nav__logo">Alex</a> -->
         <div class="nav__end">
@@ -44,6 +45,16 @@
               <a href="#offer" class="nav__link" data-i18n="nav-offer"
                 >Approche</a
               >
+            </li>
+
+            <li>
+              <a href="#pricing" class="nav__link" data-i18n="nav-pricing"
+                >Tarifs</a
+              >
+            </li>
+
+            <li>
+              <a href="#faq" class="nav__link" data-i18n="nav-faq">FAQ</a>
             </li>
 
             <li>
@@ -61,6 +72,8 @@
             class="lang-toggle"
             id="lang-toggle"
             aria-label="Switch to English"
+            data-i18n="lang-toggle-text"
+            data-i18n-aria-label="lang-toggle-label"
           >
             English
           </button>
@@ -88,6 +101,7 @@
                 <img
                   src="front-end/image/photoprofile.png"
                   alt="Alex Carrière"
+                  data-i18n-alt="hero-avatar-alt"
                 />
               </div>
 
@@ -97,16 +111,18 @@
               <span class="hero__greeting" data-i18n="hero-greeting"
                 >Bonjour, je suis</span
               >
-              <h1 class="hero__name">Alex Carrière</h1>
+              <h1 class="hero__name" data-i18n="hero-name">Alex Carrière</h1>
               <p class="hero__tagline" data-i18n="hero-tagline">
-                Un site web simple, professionnel et qui inspire confiance.
+                Je vous propose un site web qui transforme vos visiteurs en
+                clients — sans la complexité.
               </p>
               <p class="hero__subtitle" data-i18n="hero-subtitle">
-                Création de sites web modernes pour petites entreprises et
-                travailleurs autonomes.
+                Une présence en ligne professionnelle et percutante, conçue sur
+                mesure pour les travailleurs autonomes et entrepreneurs locaux.
               </p>
               <p class="hero__badge" data-i18n="hero-price">
-                Augmentez votre visibilité en ligne — à partir de 250 $
+                Augmentez votre visibilité en ligne — page simple à partir de
+                250 $
               </p>
               <p class="hero__badge" data-i18n="hero-estimate">
                 Estimation gratuite et sans engagement
@@ -117,14 +133,21 @@
                   class="btn btn--primary"
                   data-i18n="hero-cta-primary"
                 >
-                  Parlons de votre projet
+                  Discuter de mon projet
                 </a>
                 <a
                   href="#projects"
-                  class="btn btn--outline"
+                  class="btn btn--primary"
                   data-i18n="hero-cta-secondary"
                 >
-                  Voir des exemples
+                  Voir les exemples de projets
+                </a>
+                <a
+                  href="#pricing"
+                  class="btn btn--primary"
+                  data-i18n="hero-cta-pricing"
+                >
+                  Voir le détail des tarifs
                 </a>
               </div>
             </div>
@@ -186,9 +209,10 @@
             <div class="process-grid">
               <div class="process-card">
                 <span class="process-card__number">1</span>
-                <h4 data-i18n="process-step-1-title">Audit rapide</h4>
+                <h4 data-i18n="process-step-1-title">Zéro jargon technique</h4>
                 <p data-i18n="process-step-1-desc">
-                  Approche simple et efficace pour aller droit au but.
+                  On parle de votre entreprise, de vos services et de vos
+                  objectifs. Pas de code compliqué, juste de l'efficacité.
                 </p>
               </div>
               <div class="process-card">
@@ -200,17 +224,18 @@
               </div>
               <div class="process-card">
                 <span class="process-card__number">3</span>
-                <h4 data-i18n="process-step-3-title">Solutions adaptées</h4>
+                <h4 data-i18n="process-step-3-title">Rentable dès le départ</h4>
                 <p data-i18n="process-step-3-desc">
-                  Un projet pensé pour votre budget et votre réalité.
+                  Un site pensé pour respecter le budget d'un projet qui se
+                  lance, sans frais cachés ni mauvaise surprise.
                 </p>
               </div>
               <div class="process-card">
                 <span class="process-card__number">4</span>
-                <h4 data-i18n="process-step-4-title">Résultats concrets</h4>
+                <h4 data-i18n="process-step-4-title">Conçu pour convertir</h4>
                 <p data-i18n="process-step-4-desc">
-                  Chaque décision vise à améliorer la crédibilité et la
-                  visibilité.
+                  Chaque section et chaque bouton sont optimisés pour inciter
+                  vos visiteurs à vous appeler ou à vous écrire.
                 </p>
               </div>
               <div class="process-card">
@@ -248,16 +273,19 @@
           <div class="about__grid">
             <div class="about__text">
               <p data-i18n="about-p1">
-                Petites entreprises locales, travailleurs autonomes et
-                commerçants qui ont besoin d’un site clair et efficace.
+                Vous êtes un expert dans votre domaine, mais votre site actuel
+                ne le montre pas ? Je crée des vitrines modernes pour les
+                professionnels qui veulent être crédibles en ligne
+                immédiatement.
               </p>
               <p data-i18n="about-p2">
-                Artistes, photographes et freelances qui veulent une vitrine
-                moderne pour présenter leur travail.
+                Que vous offriez des services à domicile, des consultations ou
+                que vous gériez un commerce local, votre site doit travailler
+                pour vous et vous amener des demandes.
               </p>
               <p data-i18n="about-p3">
-                Des solutions simples, intelligentes et orientées présence en
-                ligne.
+                Pas de fioritures inutiles : uniquement ce qui fonctionne pour
+                propulser votre visibilité à Montréal.
               </p>
 
               <ul class="about__skills">
@@ -314,6 +342,188 @@
         </div>
       </section>
 
+      <section class="pricing section" id="pricing">
+        <div class="container">
+          <h2 class="section__title" data-i18n="pricing-title">
+            Des tarifs simples et transparents
+          </h2>
+          <p class="section__subtitle" data-i18n="pricing-subtitle">
+            Un forfait de base solide et des options selon vos besoins réels.
+          </p>
+
+          <div class="pricing__grid">
+            <article class="pricing-card pricing-card--base">
+              <span
+                data-i18n="pricing-base-kicker"
+                class="pricing-card__kicker"
+              >
+                Idéal pour démarrer
+              </span>
+              <h3 data-i18n="pricing-base-title" class="pricing-card__title">
+                Forfait Site Vitrine
+              </h3>
+              <p
+                class="price pricing-card__price"
+                data-i18n="pricing-base-price"
+              >
+                250 $
+              </p>
+              <ul class="pricing-card__features">
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-1"
+                >
+                  ✓ Conception & développement (Page unique)
+                </li>
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-2"
+                >
+                  ✓ Design responsive (Adapté mobile/tablette)
+                </li>
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-3"
+                >
+                  ✓ Optimisation de base (Vitesse & SEO local)
+                </li>
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-4"
+                >
+                  ✓ Mise en ligne sur votre hébergeur
+                </li>
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-5"
+                >
+                  ✓ Formation de base pour gérer votre site
+                </li>
+                <li
+                  class="pricing-card__feature"
+                  data-i18n="pricing-base-feature-6"
+                >
+                  ✓ Deux (2) rondes de révisions sont incluses. Toute demande
+                  supplémentaire ou modification de structure après validation
+                  sera facturée au tarif horaire de 50 $/h.
+                </li>
+              </ul>
+              <p data-i18n="host-note" class="host-card__note">
+                * Frais d'hébergement non inclus, entre 50$ et 80$ par an.
+              </p>
+            </article>
+
+            <article class="pricing-card pricing-card--options">
+              <h3
+                data-i18n="pricing-options-title"
+                class="pricing-card__title pricing-card__title--options"
+              >
+                Options à la carte
+              </h3>
+              <p
+                data-i18n="pricing-options-subtitle"
+                class="pricing-card__subtitle"
+              >
+                Ajoutez uniquement ce dont votre activité a besoin :
+              </p>
+
+              <ul class="pricing-card__options-list">
+                <li class="pricing-card__option">
+                  <span data-i18n="pricing-option-1"
+                    >Formulaire de contact personnalisé</span
+                  >
+                  <strong
+                    data-i18n="pricing-option-1-price"
+                    class="pricing-card__option-price"
+                    >+60 $</strong
+                  >
+                </li>
+                <li class="pricing-card__option">
+                  <span data-i18n="pricing-option-2"
+                    >Galerie photos / Portfolio</span
+                  >
+                  <strong
+                    data-i18n="pricing-option-2-price"
+                    class="pricing-card__option-price"
+                    >+60 $</strong
+                  >
+                </li>
+                <li class="pricing-card__option">
+                  <span data-i18n="pricing-option-3"
+                    >Intégration Google Maps interactive</span
+                  >
+                  <strong
+                    data-i18n="pricing-option-3-price"
+                    class="pricing-card__option-price"
+                    >+30 $</strong
+                  >
+                </li>
+                <li class="pricing-card__option">
+                  <span data-i18n="pricing-option-4"
+                    >Effets visuels et animations modernes</span
+                  >
+                  <strong
+                    data-i18n="pricing-option-4-price"
+                    class="pricing-card__option-price"
+                    >+90 $</strong
+                  >
+                </li>
+                <li class="pricing-card__option">
+                  <span data-i18n="pricing-option-5"
+                    >Option Autonomie / Modification des textes facile</span
+                  >
+                  <strong
+                    data-i18n="pricing-option-5-price"
+                    class="pricing-card__option-price"
+                    >+50 $</strong
+                  >
+                </li>
+              </ul>
+
+              <p data-i18n="pricing-note" class="pricing-card__note">
+                * Statut de petit fournisseur — Taxes non applicables.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="faq">
+        <div class="container">
+          <h2 class="section__title" data-i18n="faq-title">
+            Questions fréquentes
+          </h2>
+          <p class="section__subtitle" data-i18n="faq-subtitle">
+            Les réponses aux questions les plus courantes avant de démarrer.
+          </p>
+
+          <div class="faq__grid">
+            <details class="faq-item">
+              <summary data-i18n="faq-q1" class="faq-item__summary">
+                Le prix de 250 $ inclut-il l'hébergement et le nom de domaine ?
+              </summary>
+              <p data-i18n="faq-a1" class="faq-item__answer">
+                Non, les frais d'hébergement et de nom de domaine (environ 50$ à
+                80$/an) sont à votre charge, mais je vous accompagne pas-à-pas
+                pour les configurer à votre nom afin que vous restiez 100%
+                propriétaire de votre site.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary data-i18n="faq-q2" class="faq-item__summary">
+                Pourrai-je modifier le texte de mon site moi-même plus tard ?
+              </summary>
+              <p data-i18n="faq-a2" class="faq-item__answer">
+                Le site est fixe à la base, vous pouvez me demander des
+                modifications ponctuelles, ou ajouter l'option "Autonomie" pour
+                avoir accès à un tableau de bord ultra-simple pour modifier vos
+                textes en un clic, sans toucher au code !
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- ===== PROJETS ===== -->
       <section class="projects section" id="projects">
         <div class="container">
@@ -350,7 +560,7 @@
                   rel="noopener"
                   data-i18n="project-link-live"
                 >
-                  → Voir un exemple en ligne
+                  → Tester la démo en direct
                 </a>
               </div>
               <div class="project-card__links">
@@ -382,7 +592,7 @@
                   rel="noopener"
                   data-i18n="project-link-live"
                 >
-                  → Voir un exemple en ligne
+                  → Tester la démo en direct
                 </a>
               </div>
               <div class="project-card__links">
@@ -413,7 +623,7 @@
                   rel="noopener"
                   data-i18n="project-link-live"
                 >
-                  → Voir un exemple en ligne
+                  → Tester la démo en direct
                 </a>
               </div>
               <div class="project-card__links">
@@ -444,7 +654,7 @@
                   rel="noopener"
                   data-i18n="project-link-live"
                 >
-                  → Voir un exemple en ligne
+                  → Tester la démo en direct
                 </a>
               </div>
               <div class="project-card__links">
@@ -517,49 +727,6 @@
                     />
                   </svg>
                 </span>
-                <!-- <div>
-                  <strong data-i18n="contact-location-label"
-                    >Localisation</strong
-                  >
-                  <span data-i18n="contact-location-value"
-                    >Disponible dans le monde entier (Télétravail)</span
-                  >
-                </div>
-              </div>
-
-              <div class="contact-info-card">
-                <span class="contact-info-card__icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    />
-                  </svg>
-                </span> -->
-                <!-- <div>
-                  <strong data-i18n="contact-phone-label">Téléphone</strong>
-                  <a href="tel: 14388317128">+1 (438) 831-7128</a>
-                </div>
-              </div>
-
-              <div class="contact-info-card">
-                <span class="contact-info-card__icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12c0 4.84 3.44 8.88 8 9.8V15h-2.5V12h2.5v-2.1c0-2.45 1.45-3.81 3.68-3.81 1.07 0 2.19.19 2.19.19v2.41h-1.23c-1.22 0-1.59.75-1.59 1.53V12h2.71l-.43 3h-2.28v6.8c4.56-.92 8-4.96 8-9.8 0-5.52-4.48-10-10-10z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span> -->
                 <div>
                   <strong data-i18n="contact-facebook-label"
                     >Facebook Messenger</strong
@@ -577,7 +744,7 @@
             <!-- Contact form -->
             <form class="contact__form" id="contact-form" novalidate>
               <div class="hp-field" aria-hidden="true">
-                <label for="website">Website</label>
+                <label for="website" data-i18n="website-label">Website</label>
                 <input
                   type="text"
                   id="website"
@@ -673,7 +840,8 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>
-          &copy; <span id="footer-year"></span> Alex Carrière.
+          &copy; <span id="footer-year"></span>
+          <span data-i18n="footer-name">Alex Carrière</span>.
           <span data-i18n="footer-rights">Tous droits réservés. </span>
           <span data-i18n="footer-location">
             Développeur web freelance à Montréal
@@ -687,18 +855,10 @@
               target="_blank"
               rel="noopener"
               aria-label="Facebook"
+              data-i18n-aria-label="social-facebook-text"
+              data-i18n="social-facebook-text"
             >
               Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/alex-carri%C3%A8re-3178796b/"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
             </a>
           </li>
         </ul>
